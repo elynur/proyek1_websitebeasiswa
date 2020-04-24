@@ -12,7 +12,6 @@
                   <tr>
                     <th>Id Politeknik</th>
                     <th>Nama Politeknik</th>
-                    <th>Previledge</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -22,11 +21,6 @@
                       <tr>
                         <td><?= $rowData['id_politeknik']?></td>
                         <td><?= $rowData['nama_politeknik']?></td>
-                        <td>
-                          <a href="<?php echo base_url('politeknik/edit/'.$rowData['id_politeknik'])?>" class="badge badge-success">Edit</a>
-                          <a href="" onclick="return confirm('Are you sure you want to delete this item?');"
-                            class="badge badge-danger">Delete</a>
-                        </td>
                       </tr>
                       <?php } ?>
                 </tbody>
