@@ -15,13 +15,13 @@ form_open('login/proses_login');
   <title>Login Page</title>
 
   <!-- Plugin for fontawesome -->
-  <link href="http://localhost:/proyek/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="<?php echo base_url('assets/vendor/fontawesome-free/css/all.min.css')?>" rel="stylesheet" type="text/css">
 
   <!-- Page level plugin CSS-->
-  <link href="http://localhost:/proyek/assets/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <link href="<?php echo base_url('assets/vendor/datatables/dataTables.bootstrap4.css')?>" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="http://localhost:/proyek/assets/css/sb-admin.css" rel="stylesheet">
+  <link href="<?php echo base_url('assets/css/sb-admin.css')?>" rel="stylesheet">
 
 </head>
 
@@ -71,18 +71,18 @@ form_open('login/proses_login');
 </nav>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="http://localhost:/proyek/assets/vendor/jquery/jquery.min.js"></script>
-  <script src="http://localhost:/proyek/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<?php echo base_url('assets/vendor/jquery/jquery.min.js')?>"></script>
+  <script src="<?php echo base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="http://localhost:/proyek/assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="<?php echo base_url('assets/vendor/jquery-easing/jquery.easing.min.js')?>"></script>
 
   <!-- Page level plugin JavaScript-->
-  <script src="http://localhost:/proyek/assets/vendor/datatables/jquery.dataTables.js"></script>
-  <script src="http://localhost:/proyek/assets/vendor/datatables/dataTables.bootstrap4.js"></script>
+  <script src="<?php echo base_url('assets/vendor/datatables/jquery.dataTables.js')?>"></script>
+  <script src="<?php echo base_url('assets/vendor/datatables/dataTables.bootstrap4.js')?>"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="http://localhost:/proyek/assets/js/sb-admin.min.js"></script>
+  <script src="<?php echo base_url('assets/js/sb-admin.min.js')?>"></script>
 
 </body>
 
