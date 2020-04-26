@@ -6,49 +6,45 @@
             Biodata Siswa</div>
           <div class="card-body">
             <div class="table-responsive">
-             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <form action="addBiodata" method="POST">
+            <?php
+                foreach($siswa as $siswa){?>
                 <tr>
                   <td> NISN : </td>
-                  <td> <input type="text" name="nisn"></td>
+                  <td><?=$siswa['nisn'];?></td>
               </tr>
               <tr>
                   <td> Nama : </td>
-                  <td> <input type="text" name="nama"></td>
+                  <td><?=$siswa['nama_siswa'];?></td>
               </tr>
-              <tr>
-                  <td> Tempat Tanggal Lahir : </td>
-                  <td> <input type="date" name="ttl"></td>
-              </tr>
-              <tr>
               <tr>
                   <td> Alamat : </td>
-                  <td> <input type="text" name="alamat" class="w-100"></td>
+                  <td><?=$siswa['alamat_siswa'];?></td>
               </tr>
               <tr>
                   <td> Nama Orang Tua : </td>
-                  <td> <textarea type="text" name="nama-ortu"></textarea></td>
+                  <td><?=$siswa['nama_orangtua'];?></td>
               </tr>
               <tr>
                   <td> Email : </td>
-                  <td> <input type="text" name="email"></td>
+                  <td><?=$siswa['email'];?></td>
               </tr>
               <tr>
                   <td> No Telepon : </td>
-                  <td> <input type="text" name="no_telp"></td>
+                  <td><?=$siswa['no_telepon'];?></td>
               </tr>
               <tr>
                   <td> Asal Sekolah : </td>
-                  <td> <input type="text" name="asal_sekolah"></td>
+                  <td><?=$siswa['asal_sekolah'];?></td>
               </tr>
               <tr>
                   <td> Jurusan Sekolah : </td>
-                  <td> <input type="text" name="jrsn_sekolah"></td>
+                  <td><?=$siswa['jurusan_sekolah'];?></td>
               </tr>
               </table>
               <button type="submit" name="submit" class="btn btn-primary">Tambah Data Diri</button></div> 
           </form>
               </table>
+              <?php  } ?>
             </div>
           </div>
         </div>
