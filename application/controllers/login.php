@@ -30,9 +30,9 @@
                 $this->session->set_userdata('level',$row->level);
 
                 if($this->session->userdata('level')=='admin'){
-                    redirect('../akun');
+                    $this->load->view('admin/akun')
                 }elseif($this->session->userdata('level')=='siswa'){
-                    redirect('../biodata_siswa');
+                    $this->load->view('siswa/biodata_siswa')
                 }
             }
             else{

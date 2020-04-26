@@ -11,7 +11,6 @@
             $this->load->library('form_validation');
             $this->load->library('session');
         }
-        
 
         public function index($nisn){
             $data['title'] = "Biodata Siswa";

@@ -6,8 +6,6 @@
             Biodata Siswa</div>
           <div class="card-body">
             <div class="table-responsive">
-            <?php
-                foreach($siswa as $siswa){?>
                 <tr>
                   <td> NISN : </td>
                   <td><?=$siswa['nisn'];?></td>
@@ -44,7 +42,6 @@
               <button type="submit" name="submit" class="btn btn-primary">Tambah Data Diri</button></div> 
           </form>
               </table>
-              <?php  } ?>
             </div>
           </div>
         </div>
