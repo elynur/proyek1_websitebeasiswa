@@ -14,17 +14,13 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-   <!-- <link href="http://localhost:8080/proyek/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet"> -->
-  <link rel="stylesheet" href="<?php echo base_url("assets/vendor/fontawesome-free/css/all.min.css"); ?>" />
-  
-  <!-- Page level plugin CSS-->
-  <link rel="stylesheet" href="<?php echo base_url("assets/vendor/datatables/dataTables.bootstrap4.css"); ?>" />
+  <link href="<?= base_url() ?>assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
-  <!-- <link href="http://localhost:8080/proyek/assets/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet"> -->
+<!-- Page level plugin CSS-->
+<link href="<?= base_url() ?>assets/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 
-  <!-- Custom styles for this template-->
-  <link rel="stylesheet" href="<?php echo base_url("assets/css/sb-admin.css"); ?>" />
-  <!-- <link href="http://localhost:8080/proyek/assets/css/sb-admin.css" rel="stylesheet"> -->
+<!-- Custom styles for this template-->
+<link href="<?= base_url() ?>assets/css/sb-admin.css" rel="stylesheet">
 </head>
 <style>
   .carousel-item {
@@ -152,18 +148,18 @@
 </section>
 
 <!-- Bootstrap core JavaScript-->
-<script src="<?php echo base_url('assets/vendor/datatables/jquery.dataTables.js')?>"></script>
-<script src="<?php echo base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
+<script src="<?= base_url() ?>assets/vendor/datatables/jquery.dataTables.js"></script>
+<script src="<?= base_url() ?>/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core plugin JavaScript-->
-<script src="<?php echo base_url('assets/vendor/jquery-easing/jquery.easing.min.js')?>"></script>
+<script src="<?= base_url() ?>assets/vendor/jquery-easing/jquery.easing.min.js"></script>
 
 <!-- Page level plugin JavaScript-->
-<script src="<?php echo base_url('assets/vendor/datatables/jquery.dataTables.js')?>"></script>
-<script src="<?php echo base_url('assets/vendor/datatables/dataTables.bootstrap4.js')?>"></script>
+<script src="<?= base_url() ?>assets/vendor/datatables/jquery.dataTables.js"></script>
+<script src="<?= base_url() ?>assets/vendor/datatables/dataTables.bootstrap4.js"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="<?php echo base_url('assets/js/sb-admin.min.js')?>"></script>
+<script src="<?= base_url() ?>assets/js/sb-admin.min.js"></script>
 
 
 </body>
