@@ -19,6 +19,8 @@
   <!-- Custom styles for this template-->
   <link href="<?= base_url() ?>assets/css/sb-admin.css" rel="stylesheet">
 
+  <script src="<?= base_url()?>assets/vendor/jquery/jquery.min.js"></script>
+
 </head>
 
 <body id="page-top">
@@ -43,7 +45,7 @@
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
         <li class="nav-item">
-        <a class="nav-link" href="berkas">
+        <a class="nav-link" href="<?php echo base_url ?>">
           <i class="fas fa-users"></i>
           <span>Berkas</span></a>
       </li>

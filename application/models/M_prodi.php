@@ -18,6 +18,11 @@ class M_prodi extends CI_Model {
         return $query->result_array();
     }
 
+    public function getProdiByID($id){
+        $query=$this->db->get_where('prodi', array('id_prodi' => $id));
+        return $query->row_array();
+    }
+
     public function tambahProdi(){
         $data=[
             "nama_prodi" => $this->input->post('nama_prodi', true),
@@ -26,5 +31,23 @@ class M_prodi extends CI_Model {
         
         $this->db->insert('prodi', $data);
     }
+
+    function editProdi(){
+        $data=[
+            "id_prodi" => $this->input->post('id_prodi', true),
+            "nama_prodi" => $this->input->post('nama_prodi', true)
+        ];
+
+        // ambil id_jurusan berdasarkan parameter id
+        $getIDP = $this->input->get('id_prodi');
+        
+        $this->db->where('id_prodi', $getIDP)->update('prodi', $data);
+    }
+
+        // Delete
+    function actDelete( $id ) {
+
+        $this->db->where('id_prodi', $id)->delete('prodi');
+        }
 }
 /* End of file M_prodi.php */

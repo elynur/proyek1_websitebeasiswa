@@ -28,8 +28,8 @@
                         <td><?= $rowData['nama_jurusan']?></td>
                         <td><?= $rowData['nama_politeknik']?></td>
                         <td>
-                          <a href="<?php echo base_url('prodi/edit/'.$rowData['id_jurusan'])?>" class="badge badge-success">Edit</a>
-                          <a href="" onclick="return confirm('Are you sure you want to delete this item?');"
+                          <a href="<?php echo base_url('prodi/edit/'.$rowData['id_prodi'])?>" class="badge badge-success">Edit</a>
+                          <a href="<?php echo base_url('prodi/hapus/'. $rowData['id_prodi']) ?>" onclick="return confirm('Are you sure you want to delete this item?');"
                             class="badge badge-danger">Delete</a>
                         </td>
                       </tr>

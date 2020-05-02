@@ -44,19 +44,6 @@ class Jurusan extends CI_Controller {
 
                 redirect('jurusan/index','refresh');
             }
-            
-
-            // kondisi dimana melakukan update (submit update)
-            // $this->form_validation->set_rules('id_jurusan', 'id_jurusan', 'required');
-            // $this->form_validation->set_rules('nama_jurusan', 'nama_jurusan', 'required');
-        
-            // if ($this->form_validation->run()) {
-            //     echo"well";
-    
-            // }  else {
-            //     echo"gakk";
-            // } 
-
         } else {
 
             echo "Hayoo mau ngapain ? cari bug yaa";
@@ -70,12 +57,6 @@ class Jurusan extends CI_Controller {
             
             redirect('jurusan/index','refresh');
         }
-        /** 
-         * 
-         *  1. Kirim id dari view -> controller (function)
-         *  2. Lempar ke moel -> function hapus
-         *  3. Masukan query $this->db->where()->delete()
-         */
     }
 
 
