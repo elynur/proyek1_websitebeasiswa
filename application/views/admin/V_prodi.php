@@ -7,6 +7,7 @@
             Data Prodi</div>
           <div class="card-body">
             <div class="table-responsive">
+            <a href="<?php echo base_url('prodi/tambah/')?>" class="btn btn-primary mb-3">Tambah Prodi</a>
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                   <tr>

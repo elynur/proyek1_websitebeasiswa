@@ -16,10 +16,15 @@ class M_prodi extends CI_Model {
         
         $query = $this->db->get();
         return $query->result_array();
-
     }
 
-
-
+    public function tambahProdi(){
+        $data=[
+            "nama_prodi" => $this->input->post('nama_prodi', true),
+            "id_jurusan" => $this->input->post('nama_jurusan', true)
+        ];
+        
+        $this->db->insert('prodi', $data);
+    }
 }
 /* End of file M_prodi.php */

@@ -9,6 +9,7 @@ class Prodi extends CI_Controller {
     {
         parent::__construct();
             //Do your magic here
+            $this->load->model('M_jurusan');
             $this->load->model('M_prodi');
             $this->load->library('form_validation');
             $this->load->library('session');
@@ -24,6 +25,23 @@ class Prodi extends CI_Controller {
             $this->load->view('admin/V_prodi', $data);
             $this->load->view('template/footer');
 
+    }
+
+    function tambah(){
+        $data['title']='Tambah Prodi';
+        $data['getDataJurusan'] = $this->M_jurusan->getDataJurusan();
+
+        $this->load->view('template/header',$data);
+        $this->load->view('prodi/tambah',$data);
+        $this->load->view('template/footer');
+
+        if( $this->input->post('nama_prodi')){
+            $this->M_prodi->tambahProdi();
+            $this->session->set_flashdata('flash-data', 'ditambah');
+                
+            redirect('prodi/index','refresh');
+    
+        }
     }
 
 }
