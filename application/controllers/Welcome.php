@@ -6,7 +6,10 @@
     
         public function index()
         {
-            echo "Well";
+            echo $this->session->userdata('nama');
+            echo '<hr>';
+
+            print_r( $this->session->userdata() );
         }
     
     }

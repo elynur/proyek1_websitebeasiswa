@@ -20,31 +20,40 @@
             $username=htmlspecialchars($this->input->post('username'));
             $password=htmlspecialchars($this->input->post('password'));
 
-            $ceklogin=$this->login_model->login($username,$password);
+            $ceklogin=$this->login_model->processLogin($username,$password);
             // var_dump($ceklogin);
             // die();
 
             if($ceklogin){
-                foreach($ceklogin as $row);
-                $this->session->set_userdata('user',$row->username);
-                $this->session->set_userdata('level',$row->level);
 
-                if($this->session->userdata('level')=='admin'){
-                    $this->load->view('admin/akun')
-                }elseif($this->session->userdata('level')=='siswa'){
-                    $this->load->view('siswa/biodata_siswa')
+                // membuat session baru (sesi)
+               
+                $this->session->set_userdata('user', $ceklogin->username);
+                $this->session->set_userdata('level', $ceklogin->level);
+                $this->session->set_userdata('sess_id', $ceklogin->id_user);
+               
+                if($this->session->userdata('level') == 'admin'){
+
+                    redirect('akun');
+
+                }else if($this->session->userdata('level') == 'siswa'){
+
+                    redirect('isi_beasiswa');
                 }
             }
             else{
-            $this->session->set_flashdata('message', 'Password salah');
-            redirect('login');
+
+                
+                $this->session->set_flashdata('message', 'Password salah');
+                redirect('login');
             }
         }
         
-        // public function logout(){
-        //     $this->session->sess_destroy();
-        //     redirect('login','refresh');
-        // }
+        public function proses_logout(){
+            $this->session->sess_destroy();
+           
+            redirect('login','refresh');
+        }
     }
     
     /* End of file login.php */

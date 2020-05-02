@@ -45,25 +45,25 @@
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
         <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url ?>">
+        <a class="nav-link" href="<?php echo base_url('berkas') ?>">
           <i class="fas fa-users"></i>
           <span>Berkas</span></a>
       </li>
 
         <li class="nav-item">
-        <a class="nav-link" href="beasiswa">
+        <a class="nav-link" href="<?php echo base_url('beasiswa') ?>">
           <i class="fas fa-users"></i>
           <span>Beasiswa</span></a>
       </li>
 
         <li class="nav-item">
-        <a class="nav-link" href="siswa">
+        <a class="nav-link" href="<?php echo base_url('siswa') ?>">
           <i class="fas fa-book-open"></i>
           <span>Siswa</span></a>
       </li>
      
         <li class="nav-item">
-        <a class="nav-link" href="akun">
+        <a class="nav-link" href="<?php echo base_url('akun') ?>">
           <i class="fas fa-book-open"></i>
           <span>Akun</span></a>
       </li>

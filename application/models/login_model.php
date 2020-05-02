@@ -23,6 +23,22 @@
                 return false;
             }
         }
+
+        /** Refactor */
+        function processLogin( $username, $password ){
+
+            // kondisi
+            $kondisi = [
+                'username'  => $username, // ely cantik
+                'password'  => $password // 123
+            ];
+            $query = $this->db->get_where('user', $kondisi);
+            // SELECT * FROM user WHERE username = "$username" AND password = "$password"
+            return ($query->num_rows() > 0) ? $query->row() : false;
+
+            // kondisi |  (kondisi) ? kondisi terpenuhi : tidak terpenuhi (else)
+
+        }
     
     }
     
