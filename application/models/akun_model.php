@@ -65,15 +65,8 @@
             $dataChild = array(
                 'nisn' => $this->input->post('nisn', true)
             );
-            $this->db->insert('siswa', $dataChild);
-
-
-            $this->db->insert('user', $data);
-            // $this->db->where('nisn', $getNISN);
-            // $this->db->update('user',$data);
+            $this->db->insert('user', $dataChild);
         }
-
-
     }
     
     /* End of file akun_model.php */

@@ -12,7 +12,6 @@ class M_jurusan extends CI_Model {
     }
 
     public function getJurusanByID($id){
-            
         $query=$this->db->get_where('jurusan', array('id_jurusan' => $id));
         return $query->row_array();
     }
@@ -23,10 +22,28 @@ class M_jurusan extends CI_Model {
             "nama_jurusan" => $this->input->post('nama_jurusan', true)
         ];
 
-        // ambil nisn berdasarkan parameter NISN=
+        // ambil id_jurusan berdasarkan parameter id
         $getIDJ = $this->input->get('id_jurusan');
         
         $this->db->where('id_jurusan', $getIDJ)->update('jurusan', $data);
+    }
+
+    public function tambahJurusan(){
+        $data=[
+            "nama_jurusan" => $this->input->post('nama_jurusan', true),
+            "id_politeknik" => $this->input->post('nama_politeknik', true)
+        ];
+        
+        $this->db->insert('jurusan', $data);
+    }
+
+
+    // Delete
+    function actDelete( $id ) {
+
+        $this->db->where('id_jurusan', $id)->delete('jurusan');
+        // "DELETE FROM jurusan WHERE "
+        // echo 'param dari controller elah diterima ' .$id;
     }
 
 }
