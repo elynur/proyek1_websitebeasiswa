@@ -21,6 +21,21 @@
             $this->load->view('siswa/isi_beasiswa', $data);
             $this->load->view('template/footer2');
         }
+        public function tambah(){
+            $data['title']='Tambah Beasiswa';
+            $this->load->view('template/header2',$data);
+            $this->load->view('siswa/isi_siswa',$data);
+            $this->load->view('template/footer2');
+            
+            if( $this->input->post('id_user') ){
+         
+                $this->akun_model->tambahBeasiswa();
+                $this->session->set_flashdata('flash-data', 'ditambah');
+                    
+                redirect('siswa/biodata_siswa','refresh');
+        
+            }
+        }
     
     }
     

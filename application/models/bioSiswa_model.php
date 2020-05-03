@@ -5,9 +5,23 @@
     
     class bioSiswa_model extends CI_Model {
     
-        public function getSiswabyId($nisn){
-            $query=$this->db->get_where('siswa', array('nisn' => $nisn));
+        public function getSiswabyId($id){
+            $query=$this->db->get_where('siswa', array('id_user' => $id));
             return $query->row_array();
+        }
+    
+        public function tambahBio(){
+            $data=[
+                "nisn" => $this->input->post('nisn', true),
+                "nama_siswa" => $this->input->post('nama_siswa', true),
+                "alamat_siswa" => $this->input->post('alamat_siswa', true),
+                "email" => $this->input->post('email', true),
+                "no_telepon" => $this->input->post('no_telepon', true),
+                "asal_sekolah" => $this->input->post('asal_sekolah', true),
+                "jurusan_sekolah" => $this->input->post('jurusan_sekolah', true)
+            ];
+    
+            $this->db->insert('user', $data);
         }
     
     }

@@ -68,7 +68,6 @@
                 redirect('akun/index','refresh');
         
             }
-
         }
 
         public function hapus( $param = null ){

@@ -12,12 +12,28 @@
             $this->load->library('session');
         }
 
-        public function index($nisn){
+        public function index(){
             $data['title'] = "Biodata Siswa";
-            $data['siswa']=$this->bioSiswa_model->getSiswabyId($nisn);
+            //$data['siswa']=$this->bioSiswa_model->getSiswabyId($nisn);
             $this->load->view('template/header2');
             $this->load->view('siswa/biodata_siswa', $data);
             $this->load->view('template/footer2');
+        }
+
+        public function tambah(){
+            $data['title']='Tambah Data';
+            $this->load->view('template/header2',$data);
+            $this->load->view('siswa/biodata_siswa',$data);
+            $this->load->view('template/footer2');
+            
+            if( $this->input->post('id_user') ){
+         
+                $this->akun_model->tambahBio();
+                $this->session->set_flashdata('flash-data', 'ditambah');
+                    
+                redirect('siswa/biodata_siswa','refresh');
+        
+            }
         }
     }
     

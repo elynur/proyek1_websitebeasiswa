@@ -4,45 +4,55 @@
           <div class="card-header">
             <i class="fas fa-table"></i>
             Biodata Siswa</div>
-          <div class="card-body">
+            <div class="card-body">
             <div class="table-responsive">
+             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <form action="addBeasiswa" method="POST">
                 <tr>
                   <td> NISN : </td>
-                  <td><?=$siswa['nisn'];?></td>
+                  <td>p</td>
+                  <!-- <td><?=$id['nisn'];?></td> -->
               </tr>
               <tr>
                   <td> Nama : </td>
-                  <td><?=$siswa['nama_siswa'];?></td>
+                  <td>pjabdjkdfbajkbdkjwvahfvahfejg</td>
+                  <!-- <td><?=$id['nama_siswa'];?></td> -->
               </tr>
               <tr>
                   <td> Alamat : </td>
-                  <td><?=$siswa['alamat_siswa'];?></td>
+                  <td>p</td>
+                  <!-- <td><?=$id['alamat_siswa'];?></td> -->
               </tr>
               <tr>
                   <td> Nama Orang Tua : </td>
-                  <td><?=$siswa['nama_orangtua'];?></td>
+                  <td>p</td>
+                  <!-- <td><?=$id['nama_orangtua'];?></td> -->
               </tr>
               <tr>
                   <td> Email : </td>
-                  <td><?=$siswa['email'];?></td>
+                  <td>p</td>
+                  <!-- <td><?=$id['email'];?></td> -->
               </tr>
               <tr>
                   <td> No Telepon : </td>
-                  <td><?=$siswa['no_telepon'];?></td>
+                  <td>p</td>
+                  <!-- <td><?=$id['no_telepon'];?></td> -->
               </tr>
               <tr>
                   <td> Asal Sekolah : </td>
-                  <td><?=$siswa['asal_sekolah'];?></td>
+                  <td>p</td>
+                  <!-- <td><?=$id['asal_sekolah'];?></td> -->
               </tr>
               <tr>
                   <td> Jurusan Sekolah : </td>
-                  <td><?=$siswa['jurusan_sekolah'];?></td>
+                  <td>p</td>
+                  <!-- <td><?=$id['jurusan_sekolah'];?></td> -->
               </tr>
-              </table>
-              <button type="submit" name="submit" class="btn btn-primary">Tambah Data Diri</button></div> 
-          </form>
+                </form>
               </table>
             </div>
+            <button type="submit" name="submit" class="btn btn-primary" href="">Tambah Data Diri</button>
+            <button type="submit" name="submit" class="btn btn-success" href="" >Edit</button>
           </div>
         </div>
 
@@ -80,22 +90,3 @@
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
-
-  <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.php">Logout</a>
-        </div>
-      </div>
-    </div>
-  </div>
