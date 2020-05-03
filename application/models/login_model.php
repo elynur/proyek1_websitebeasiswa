@@ -4,25 +4,25 @@
     
     class login_model extends CI_Model {
     
-        function login($username, $password){
-            // var_dump($username);
-            // var_dump($password);
-            // die();
-            $this->db->select('username,password,level');
-            $this->db->from('user');
-            $this->db->where('username',$username);
-            $this->db->where('password',$password);
-            $this->db->limit(1);
+        // function login($username, $password){
+        //     // var_dump($username);
+        //     // var_dump($password);
+        //     // die();
+        //     $this->db->select('username,password,level');
+        //     $this->db->from('user');
+        //     $this->db->where('username',$username);
+        //     $this->db->where('password',$password);
+        //     $this->db->limit(1);
             
-            $query=$this->db->get();
-            // var_dump($username,$password);
-            // die();
-            if($query->num_rows()==1){
-                return $query->result();
-            }else{
-                return false;
-            }
-        }
+        //     $query=$this->db->get();
+        //     // var_dump($username,$password);
+        //     // die();
+        //     if($query->num_rows()==1){
+        //         return $query->result();
+        //     }else{
+        //         return false;
+        //     }
+        // }
 
         /** Refactor */
         function processLogin( $username, $password ){

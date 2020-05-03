@@ -7,12 +7,11 @@
                         Akun</div>
                     <div class="card-body">
                         <div class="table-responsive">
-                           
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <form action="?nisn=<?php echo $identitas['nisn'] ?>" method="POST">
+                                    <form action="?id_user=<?php echo $identitas['id_user'] ?>" method="POST">
                                         <tr>
                                             <td>Nama</td>
-                                            <td><input type="text" class="form-control" name="name" value="<?= $identitas['name'] ?>"></td>
+                                            <td><input type="text" class="form-control" name="nama" value="<?= $identitas['name'] ?>"></td>
                                         </tr>
                                         <tr>
                                             <td>Email</td>

@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="http://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+
 <div id="content-wrapper">
       <div class="container-fluid">
         <!-- DataTables Example -->
@@ -49,6 +51,11 @@
         </div>
 
       </div>
-      <!-- /.container-fluid
-      
-       -->
+   
+   
+      <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+      <script>
+        $(document).ready( function () {
+          $('#dataTable').DataTable();
+      } );
+      </script>

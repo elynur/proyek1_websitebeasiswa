@@ -48,7 +48,7 @@ form_open('login/proses_login');
             </div>
           </div>
           <button type="submit" class="btn btn-success btn-lg float-right" id="btnlogin" style="padding:3px 8px;">Login</button>
-          <small class="smallSignUp text-muted" style="margin-top=20px;">Apakah anda punya akun? <a href="<?= base_url().'register' ?>">Daftar Disini</a></small>
+          <small class="smallSignUp text-muted" style="margin-top=20px;">Apakah anda punya akun? <a href="<?= base_url('register') ?>">Daftar Disini</a></small>
         </form> 
         <?php 
         form_close();

@@ -22,7 +22,6 @@
         }
        
         public function edit( $param = null ){
-
             /** Todo List 
              * 
              * 1. Pastikan memiliki id yang dilempar pada URL (parameter)
@@ -42,41 +41,17 @@
                 $this->load->view('template/header',$data);
                 $this->load->view('account/edit',$data);
                 $this->load->view('template/footer');
-
-
-                // kondisi dimana melakukan update (submit update)
-                $this->form_validation->set_rules('username', 'username', 'required');
-                $this->form_validation->set_rules('password', 'password', 'required');
             
-                if ($this->form_validation->run()) {
-                    
+                if( $this->input->post('email') ){
                     $this->akun_model->editAkun();
                     $this->session->set_flashdata('flash-data', 'diedit');
-                    redirect('akun','refresh');    
+                    redirect('akun/index','refresh');    
                 }  
 
             } else {
-
                 echo "Hayoo mau ngapain ? cari bug yaa";
             }
-
-            // $data['title']='Edit Akun';
-            // $this->form_validation->set_rules('id_user', 'id_user', 'required');
-            // $this->form_validation->set_rules('username', 'username', 'required');
-            // $this->form_validation->set_rules('password', 'password', 'required');
-            
-            // if ($this->form_validation->run() == FALSE) {
-            //     $data['akun']=$this->buku_model->getbukuById($id);
-            //     $this->load->view('template/header',$data);
-            //     $this->load->view('account/formedit',$data);
-            //     $this->load->view('template/footer');
-            // }else {
-            //     $this->akun_model->editAkun();
-            //     $this->session->set_flashdata('flash-data', 'diedit');
-            //     redirect('akun','refresh');     
-            // }  
-            
-        
+ 
         }
 
         public function tambah(){
@@ -84,18 +59,24 @@
             $this->load->view('template/header',$data);
             $this->load->view('account/tambah',$data);
             $this->load->view('template/footer');
-
-            $this->form_validation->set_rules('nisn', 'nisn', 'required');
-            $this->form_validation->set_rules('username', 'username', 'required');
-            $this->form_validation->set_rules('password', 'password', 'required');
             
-                if ($this->form_validation->run()) {
-                    $this->akun_model->tambahAkun();
-                    $this->session->set_flashdata('flash-data', 'ditambah');
-                    redirect('akun/index','refresh'); 
+            if( $this->input->post('email') ){
+         
+                $this->akun_model->tambahAkun();
+                $this->session->set_flashdata('flash-data', 'ditambah');
                     
-                }
+                redirect('akun/index','refresh');
+        
+            }
 
+        }
+
+        public function hapus( $param = null ){
+            if ( $param ) {
+                $this->akun_model->actDelete( $param );
+                
+                redirect('akun/index','refresh');
+            }
         }
 
     }

@@ -27,17 +27,23 @@
       <div class="card-header" style="color: #; text-align: center;"><h4>REGISTER</h4></div>
       <div class="card-body">
      
-      <form action="<?php echo base_url('');?>" method="POST">
+      <form action="<?php echo base_url('register/proses_register');?>" method="POST">
           <div class="form-group">
             <div class="form-label-group">
                 Name
-              <input type="text" name="name" id="inputName" class="form-control input_user" value="" placeholder="name" required="required">
+              <input type="text" name="nama" id="inputName" class="form-control input_user" value="" placeholder="name" required="required">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label-group">
+                Email
+              <input type="text" name="email" id="inputEmail" class="form-control input_user" value="" placeholder="email" required="required">
             </div>
           </div>
           <div class="form-group">
             <div class="form-label-group">
                 Username
-                <input type="text" name="name" id="inputUsername" class="form-control input_user" value="" placeholder="username" required="required">
+                <input type="text" name="username" id="inputUsername" class="form-control input_user" value="" placeholder="username" required="required">
             </div>
           </div>
           <div class="form-group">

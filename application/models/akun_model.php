@@ -36,36 +36,42 @@
 
         public function getAkunById($id){
             
-            $query=$this->db->get_where('user', array('nisn' => $id));
+            $query=$this->db->get_where('user', array('id_user' => $id));
             return $query->row_array();
         }
         public function editAkun(){
             $data=[
+                "name" => $this->input->post('nama', true),
+                "email" => $this->input->post('email', true),
                 "username" => $this->input->post('username', true),
-                "password" => $this->input->post('password', true)
+                "password" => $this->input->post('password', true),
+                "level" => $this->input->post('level', true)
             ];
 
             // ambil nisn berdasarkan parameter NISN=
-            $getNISN = $this->input->get('nisn');
+            $getNISN = $this->input->get('id_user');
             
-            $this->db->where('nisn', $getNISN)->update('user', $data);
-            // $this->db->where('nisn', $getNISN);
-            // $this->db->update('user',$data);
+            $this->db->where('id_user', $getNISN)->update('user', $data);
+        
         }
 
         public function tambahAkun(){
             $data=[
-                "nisn" => $this->input->post('nisn', true),
+                "name" => $this->input->post('nama', true),
+                "email" => $this->input->post('email', true),
                 "username" => $this->input->post('username', true),
-                "password" => $this->input->post('password', true)
+                "password" => $this->input->post('password', true),
+                "level" => $this->input->post('level', true)
             ];
-            
+    
+            $this->db->insert('user', $data);
+        }
 
-            // add child row 
-            $dataChild = array(
-                'nisn' => $this->input->post('nisn', true)
-            );
-            $this->db->insert('user', $dataChild);
+        // Delete
+        function actDelete( $id ) {
+            $this->db->where('id_user', $id)->delete('user');
+            // "DELETE FROM jurusan WHERE "
+            // echo 'param dari controller elah diterima ' .$id;
         }
     }
     

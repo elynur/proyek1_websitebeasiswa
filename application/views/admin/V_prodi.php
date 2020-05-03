@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="http://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+
 <div id="content-wrapper">
       <div class="container-fluid">
         <!-- DataTables Example -->
@@ -8,7 +10,7 @@
           <div class="card-body">
             <div class="table-responsive">
             <a href="<?php echo base_url('prodi/tambah/')?>" class="btn btn-primary mb-3">Tambah Prodi</a>
-              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <table class="table table-bordered" id="datatable" width="100%" cellspacing="0">
                 <thead>
                   <tr>
                     <th>Id Prodi</th>
@@ -41,4 +43,13 @@
         </div>
 
       </div>
+
+
+      
+      <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+      <script>
+        $(document).ready( function () {
+          $('#datatable').DataTable();
+      } );
+      </script>
       

@@ -10,7 +10,7 @@
           <div class="card-body">
             <div class="table-responsive">
             <a href="<?php echo base_url('jurusan/tambah/')?>" class="btn btn-primary mb-3">Tambah Jurusan</a>
-              <table class="table table-bordered" id="elynur" width="100%" cellspacing="0">
+              <table class="table table-bordered" id="datatable" width="100%" cellspacing="0">
                 <thead>
                   <tr>
                     <th>Id Jurusan</th>
@@ -46,6 +46,6 @@
       <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
       <script>
         $(document).ready( function () {
-          $('#elynur').DataTable();
+          $('#datatable').DataTable();
       } );
       </script>

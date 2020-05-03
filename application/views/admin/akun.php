@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="http://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+
 <div id="content-wrapper">
       <div class="container-fluid">
         <!-- DataTables Example -->
@@ -12,7 +14,7 @@
                 <thead>
                   <tr>
                     <th>NO.</th>
-                    <th>NISN</th>
+                    <!-- <th>NISN</th> -->
                     <th>Nama</th>
                     <th>Email</th>
                     <th>Username</th>
@@ -27,15 +29,14 @@
                     foreach($akun as $rowAkun){?>
                       <tr>
                         <td><?= $i++; ?></td>
-                        <td><?= $rowAkun['nisn']?></td>
                         <td><?= $rowAkun['name']?></td>
                         <td><?= $rowAkun['email']?></td>
                         <td><?= $rowAkun['username']?></td>
                         <td><?= $rowAkun['password']?></td>
                         <td><?= $rowAkun['level']?></td>
                         <td>
-                        <a href="<?php echo base_url('akun/edit/'.$rowAkun['nisn'])?>" class="badge badge-success">Edit</a>
-                        <a href="" onclick="return confirm('Are you sure you want to delete this item?');"
+                        <a href="<?php echo base_url('akun/edit/'.$rowAkun['id_user'])?>" class="badge badge-success">Edit</a>
+                        <a href="<?php echo base_url('akun/hapus/'.$rowAkun['id_user'])?>" onclick="return confirm('Are you sure you want to delete this item?');"
                            class="badge badge-danger">Delete</a>
                         </td>
                       </tr>
@@ -47,4 +48,12 @@
         </div>
 
       </div>
+
+         
+      <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+      <script>
+        $(document).ready( function () {
+          $('#dataTable').DataTable();
+      } );
+      </script>
       
