@@ -5,8 +5,8 @@
             <i class="fas fa-table"></i>
             Data Pendaftaran Beasiswa</div>
           <div class="card-body">
-          <b>Data yang sudah diisi, tidak bisa dirubah</b><br>
-            <div class="table-responsive">z
+          <h4><b style="color:red;">Data yang sudah diisi, tidak bisa dirubah</b></h4><br>
+            <div class="table-responsive">
              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <form action="addBeasiswa" method="POST">
                 <tr>
@@ -16,10 +16,6 @@
               <tr>
                   <td> Nama : </td>
                   <td> <input type="text" name="nama" class="form-control"></td>
-              </tr>
-              <tr>
-                  <td> Foto : </td>
-                  <td> <input type="text" name="foto" class="form-control"></td>
               </tr>
               <tr>
                   <td> Asal Sekolah : </td>

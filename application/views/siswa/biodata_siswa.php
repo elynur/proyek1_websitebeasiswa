@@ -10,13 +10,11 @@
                 <form action="addBeasiswa" method="POST">
                 <tr>
                   <td> NISN : </td>
-                  <td>p</td>
-                  <!-- <td><?=$id['nisn'];?></td> -->
+                  <td><?=$nisn['nisn'];?></td>
               </tr>
               <tr>
                   <td> Nama : </td>
-                  <td>pjabdjkdfbajkbdkjwvahfvahfejg</td>
-                  <!-- <td><?=$id['nama_siswa'];?></td> -->
+                  <td><?=$nisn['nama_siswa'];?></td>
               </tr>
               <tr>
                   <td>Foto : </td>
@@ -24,33 +22,27 @@
               </tr>
               <tr>
                   <td> Alamat : </td>
-                  <td>p</td>
-                  <!-- <td><?=$id['alamat_siswa'];?></td> -->
+                  <td><?=$nisn['alamat_siswa'];?></td>
               </tr>
               <tr>
                   <td> Nama Orang Tua : </td>
-                  <td>p</td>
-                  <!-- <td><?=$id['nama_orangtua'];?></td> -->
+                  <td><?=$nisn['nama_orangtua'];?></td>
               </tr>
               <tr>
                   <td> Email : </td>
-                  <td>p</td>
-                  <!-- <td><?=$id['email'];?></td> -->
+                  <td><?=$nisn['email'];?></td>
               </tr>
               <tr>
                   <td> No Telepon : </td>
-                  <td>p</td>
-                  <!-- <td><?=$id['no_telepon'];?></td> -->
+                  <td><?=$nisn['no_telepon'];?></td>
               </tr>
               <tr>
                   <td> Asal Sekolah : </td>
-                  <td>p</td>
-                  <!-- <td><?=$id['asal_sekolah'];?></td> -->
+                  <td><?=$nisn['asal_sekolah'];?></td>
               </tr>
               <tr>
                   <td> Jurusan Sekolah : </td>
-                  <td>p</td>
-                  <!-- <td><?=$id['jurusan_sekolah'];?></td> -->
+                  <td><?=$nisn['jurusan_sekolah'];?></td>
               </tr>
                 </form>
               </table>

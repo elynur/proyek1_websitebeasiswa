@@ -11,7 +11,6 @@
             $this->load->library('form_validation');
             $this->load->library('session');
         }
-
         public function index(){
             $data['title'] = "Biodata Siswa";
             //$data['siswa']=$this->bioSiswa_model->getSiswabyId($nisn);
@@ -26,16 +25,14 @@
             $this->load->view('siswa/biodata_siswa',$data);
             $this->load->view('template/footer2');
             
-            if( $this->input->post('id_user') ){
-         
+            if( $this->input->post('nisn') ){
                 $this->akun_model->tambahBio();
                 $this->session->set_flashdata('flash-data', 'ditambah');
-                    
                 redirect('siswa/biodata_siswa','refresh');
         
             }
         }
-        public function edit($param=null){
+        public function edit($nisn){
             if ( $param ) { // apakah parameter memiliki nilai ?
                 // @TODO 2 
                 $data['title']='Edit Biodata Siswa';

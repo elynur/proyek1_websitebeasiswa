@@ -31,10 +31,8 @@ form_open('login/proses_login');
     <div class="card card-login bg-light mx-auto mt-5">
       <div class="card-header" style="color: #; text-align: center;"><h2>LOGIN</h2></div>
       <div class="card-body">
-      <?php 
-        form_open('login/proses_login');
-      ?>
-      <form action="<?php echo base_url('login/proses_login'); ?>" method="post">		
+      <?php echo form_open('login/proses_login'); ?>
+      <form method="post">		
           <div class="form-group">
             <div class="form-label-group">
               <input type="text" name="username" id="inputUsername" class="form-control" placeholder="Username" required="required" autofocus="autofocus">
@@ -50,10 +48,6 @@ form_open('login/proses_login');
           <button type="submit" class="btn btn-success btn-lg float-right" id="btnlogin" style="padding:3px 8px;">Login</button>
           <small class="smallSignUp text-muted" style="margin-top=20px;">Apakah anda punya akun? <a href="<?= base_url('register') ?>">Daftar Disini</a></small>
         </form> 
-        <?php 
-        form_close();
-        ?>
-
       </div>
     </div>
   </div>

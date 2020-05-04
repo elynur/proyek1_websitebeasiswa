@@ -1,47 +1,23 @@
 <?php
-    
-    defined('BASEPATH') OR exit('No direct script access allowed');
-    
-    class login_model extends CI_Model {
-    
-        // function login($username, $password){
-        //     // var_dump($username);
-        //     // var_dump($password);
-        //     // die();
-        //     $this->db->select('username,password,level');
-        //     $this->db->from('user');
-        //     $this->db->where('username',$username);
-        //     $this->db->where('password',$password);
-        //     $this->db->limit(1);
-            
-        //     $query=$this->db->get();
-        //     // var_dump($username,$password);
-        //     // die();
-        //     if($query->num_rows()==1){
-        //         return $query->result();
-        //     }else{
-        //         return false;
-        //     }
-        // }
+defined('BASEPATH') or exit('No direct script access allowed');
+class login_model extends CI_Model
+{
 
-        /** Refactor */
-        function processLogin( $username, $password ){
+    /** Refactor */
+    function processLogin($username, $password)
+    {
+        $this->db->select('id_user, nisn, email, username, password, name, level');
+        $this->db->from('user');
+        $this->db->where('username', $username);
+        $this->db->where('password', $password);
+        $this->db->limit(1);
 
-            // kondisi
-            $kondisi = [
-                'username'  => $username, // ely cantik
-                'password'  => $password // 123
-            ];
-            $query = $this->db->get_where('user', $kondisi);
-            // SELECT * FROM user WHERE username = "$username" AND password = "$password"
-            return ($query->num_rows() > 0) ? $query->row() : false;
+        $query = $this->db->get();
+        // SELECT * FROM user WHERE username = "$username" AND password = "$password"
+        return ($query->num_rows() > 0) ? $query->result_array() : false;
+        // kondisi |  (kondisi) ? kondisi terpenuhi : tidak terpenuhi (else)
 
-            // kondisi |  (kondisi) ? kondisi terpenuhi : tidak terpenuhi (else)
-
-        }
-    
     }
+}
     
-    /* End of file login_model.php */
-    
-?>
+    /* End of file loginUser_model.php */
