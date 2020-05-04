@@ -35,6 +35,26 @@
         
             }
         }
+        public function edit($param=null){
+            if ( $param ) { // apakah parameter memiliki nilai ?
+                // @TODO 2 
+                $data['title']='Edit Biodata Siswa';
+                $data['identitas'] = $this->bioSiswa_model->getSiswaByID( $param );
+    
+                $this->load->view('template/header',$data);
+                $this->load->view('siswa/siswa_edit',$data);
+                $this->load->view('template/footer');
+    
+                if ( $this->input->post('nisn', true)) {
+                    $this->M_prodi->editBio();
+                    $this->session->set_flashdata('flash-data', 'diedit');
+    
+                    redirect('siswa/biodata_siswa','refresh');
+                }
+            } else {
+                echo "Hayoo mau ngapain ? cari bug yaa";
+            }
+        }
     }
     
     /* End of file biodata_siswa.php */

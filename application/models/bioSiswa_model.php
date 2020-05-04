@@ -23,7 +23,24 @@
     
             $this->db->insert('user', $data);
         }
+        function editBio(){
+            $data=[
+                "nisn" => $this->input->post('nisn', true),
+                "nama_siswa" => $this->input->post('nama_siswa', true),
+                "foto" => $this->input->post('foto',true),
+                "alamat_siswa" => $this->input->post('alamat_siswa',true),
+                "nama_orangtua" => $this->input->post('nama_orangtua',true),
+                "email" => $this->input->post('email',true),
+                "no_telepon" => $this->input->post('no_telepom',true),
+                "asal_sekolah" => $this->input->post('asal_sekolah',true),
+                "jurusan_sekolah" => $this->input->post('jurusan_sekolah',true)
+            ];
     
+            // ambil id_jurusan berdasarkan parameter id
+            $getIDP = $this->input->get('nisn');
+            
+            $this->db->where('nisn', $getIDP)->update('siswa', $data);
+        }
     }
     
     /* End of file bioSiswa_model.php */

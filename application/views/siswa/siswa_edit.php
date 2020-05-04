@@ -4,59 +4,52 @@
           <div class="card-header">
             <i class="fas fa-table"></i>
             Biodata Siswa</div>
-            <div class="card-body">
-            <div class="table-responsive">
+          <div class="card-body">
+          <b>Data yang sudah diisi, tidak bisa dirubah</b><br>
+            <div class="table-responsive">z
              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <form action="addBeasiswa" method="POST">
                 <tr>
                   <td> NISN : </td>
-                  <td>p</td>
-                  <!-- <td><?=$id['nisn'];?></td> -->
+                  <td></td>
               </tr>
               <tr>
                   <td> Nama : </td>
-                  <td>pjabdjkdfbajkbdkjwvahfvahfejg</td>
-                  <!-- <td><?=$id['nama_siswa'];?></td> -->
+                  <td> <input type="text" name="nama" class="form-control"></td>
               </tr>
               <tr>
-                  <td>Foto : </td>
-                  <td><button>upload</button></td>
+                  <td> Foto : </td>
+                  <td> <input type="text" name="foto" class="form-control"></td>
               </tr>
               <tr>
                   <td> Alamat : </td>
-                  <td>p</td>
-                  <!-- <td><?=$id['alamat_siswa'];?></td> -->
+                  <td> <input type="text" name="alamat" class="form-control"></td>
               </tr>
               <tr>
                   <td> Nama Orang Tua : </td>
-                  <td>p</td>
-                  <!-- <td><?=$id['nama_orangtua'];?></td> -->
+                  <td> <input type="text" name="nama_orangtua" class="form-control"></td>
               </tr>
               <tr>
                   <td> Email : </td>
-                  <td>p</td>
-                  <!-- <td><?=$id['email'];?></td> -->
+                  <td> <input type="text" name="email" class="form-control"></td>
               </tr>
               <tr>
                   <td> No Telepon : </td>
-                  <td>p</td>
-                  <!-- <td><?=$id['no_telepon'];?></td> -->
+                  <td> <input type="text" name="no_telepon" class="form-control"></td>
               </tr>
-              <tr>
+              <tr>  
                   <td> Asal Sekolah : </td>
-                  <td>p</td>
-                  <!-- <td><?=$id['asal_sekolah'];?></td> -->
+                  <td> <input type="text" name="asal_sekolah" class="form-control"></td>
               </tr>
               <tr>
                   <td> Jurusan Sekolah : </td>
-                  <td>p</td>
-                  <!-- <td><?=$id['jurusan_sekolah'];?></td> -->
+                  <td> <input type="text" name="jrsn_sekolah" class="form-control"></td>
               </tr>
-                </form>
+              </table>
+              <button type="submit" name="submit" class="btn btn-danger">Edit</button></div> 
+          </form>
               </table>
             </div>
-            <a href="" class="btn btn-primary">Tambah Data Diri</a>
-            <a href="<?php echo base_url()?>siswa/siswa_edit" class="btn btn-success" >Edit</a>
           </div>
         </div>
 

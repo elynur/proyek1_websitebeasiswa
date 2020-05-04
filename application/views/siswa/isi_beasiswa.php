@@ -5,28 +5,33 @@
             <i class="fas fa-table"></i>
             Data Pendaftaran Beasiswa</div>
           <div class="card-body">
-            <div class="table-responsive">
+          <b>Data yang sudah diisi, tidak bisa dirubah</b><br>
+            <div class="table-responsive">z
              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <form action="addBeasiswa" method="POST">
                 <tr>
                   <td> NISN : </td>
-                  <td> <input type="text" name="nisn" class="form-control"></td>
+                  <td></td>
               </tr>
               <tr>
                   <td> Nama : </td>
-                  <td> <input type="text" name="nama"></td>
+                  <td> <input type="text" name="nama" class="form-control"></td>
+              </tr>
+              <tr>
+                  <td> Foto : </td>
+                  <td> <input type="text" name="foto" class="form-control"></td>
               </tr>
               <tr>
                   <td> Asal Sekolah : </td>
-                  <td> <input type="text" name="asal_sekolah"></td>
+                  <td> <input type="text" name="asal_sekolah" class="form-control"></td>
               </tr>
               <tr>
                   <td> Nilai Rata Rata UN: </td>
-                  <td> <input type="text" name="rata_un"></td>
+                  <td> <input type="text" name="rata_un" class="form-control"></td>
               </tr>
               <tr>
                   <td> Jurusan Sekolah : </td>
-                  <td> <input type="text" name="jrsn_sekolah"></td>
+                  <td> <input type="text" name="jrsn_sekolah" class="form-control"></td>
               </tr>
               <tr>
                   <td> Politeknik Pilihan : </td>
@@ -49,7 +54,7 @@
                   </td>
               </tr>
               </table>
-              <button type="submit" name="submit" class="btn btn-primary">Tambah Buku</button></div> 
+              <button type="submit" name="submit" class="btn btn-primary">Tambah</button></div> 
           </form>
               </table>
             </div>

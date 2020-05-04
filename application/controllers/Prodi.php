@@ -11,6 +11,7 @@ class Prodi extends CI_Controller {
             //Do your magic here
             $this->load->model('M_jurusan');
             $this->load->model('M_prodi');
+            $this->load->model('M_politeknik');
             $this->load->library('form_validation');
             $this->load->library('session');
     }
@@ -29,6 +30,7 @@ class Prodi extends CI_Controller {
     function tambah(){
         $data['title']='Tambah Prodi';
         $data['getDataJurusan'] = $this->M_jurusan->getDataJurusan();
+        $data['getDataPoliteknik'] = $this->M_politeknik->getDataPoliteknik();
 
         $this->load->view('template/header',$data);
         $this->load->view('prodi/tambah',$data);
@@ -37,9 +39,7 @@ class Prodi extends CI_Controller {
         if( $this->input->post('nama_prodi')){
             $this->M_prodi->tambahProdi();
             $this->session->set_flashdata('flash-data', 'ditambah');
-                
             redirect('prodi/index','refresh');
-    
         }
     }
 
@@ -55,14 +55,12 @@ class Prodi extends CI_Controller {
             $this->load->view('template/footer');
 
             if ( $this->input->post('nama_prodi', true)) {
-
                 $this->M_prodi->editProdi();
                 $this->session->set_flashdata('flash-data', 'diedit');
 
                 redirect('prodi/index','refresh');
             }
         } else {
-
             echo "Hayoo mau ngapain ? cari bug yaa";
         }
     }
@@ -71,7 +69,6 @@ class Prodi extends CI_Controller {
         if ( $param ) {
             // $data['identitas'] = $this->M_jurusan->getJurusanByID( $param );
             $this->M_prodi->actDelete( $param );
-            
             redirect('prodi/index','refresh');
         }
     }

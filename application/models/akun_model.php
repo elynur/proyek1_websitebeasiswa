@@ -3,8 +3,6 @@
     defined('BASEPATH') OR exit('No direct script access allowed');
     
     class akun_model extends CI_Model {
-        
-
         /**
          * 
          *  Penjelasan mengenai return query | getAllAkun dan getAkunById
@@ -24,20 +22,15 @@
          * 
          * 
          */
-
         public function getAllAkun(){
-            
-            
             $query = $this->db->get('user');
             return $query->result_array();
-
-            
         }
 
         public function getAkunById($id){
-            
             $query=$this->db->get_where('user', array('id_user' => $id));
             return $query->row_array();
+
         }
         public function editAkun(){
             $data=[
@@ -50,9 +43,7 @@
 
             // ambil nisn berdasarkan parameter NISN=
             $getNISN = $this->input->get('id_user');
-            
             $this->db->where('id_user', $getNISN)->update('user', $data);
-        
         }
 
         public function tambahAkun(){
@@ -63,7 +54,6 @@
                 "password" => $this->input->post('password', true),
                 "level" => $this->input->post('level', true)
             ];
-    
             $this->db->insert('user', $data);
         }
 

@@ -15,7 +15,6 @@
             $this->load->library('session');
         }
         
-    
         public function index()
         {
             $data['title'] = "Data Politeknik";
@@ -24,10 +23,7 @@
             $this->load->view('template/header');
             $this->load->view('admin/politeknik', $data);
             $this->load->view('template/footer');
-         
-
         }
-    
     }
     
     /* End of file Politeknik.php */

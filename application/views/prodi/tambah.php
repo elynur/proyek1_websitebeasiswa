@@ -23,7 +23,7 @@
                                             </select>
                                         </tr>
                                 </table>
-                                <input type="submit" name="submit" class="btn btn-primary">
+                                <button type="submit" name="submit" class="btn btn-primary">Tambah</button>
                         </div>
                         </form>
                         </table>

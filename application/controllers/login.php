@@ -25,25 +25,19 @@
             // die();
 
             if($ceklogin){
-
                 // membuat session baru (sesi)
-               
                 $this->session->set_userdata('user', $ceklogin->username);
                 $this->session->set_userdata('level', $ceklogin->level);
                 $this->session->set_userdata('sess_id', $ceklogin->id_user);
                
                 if($this->session->userdata('level') == 'admin'){
-
                     redirect('akun');
 
                 }else if($this->session->userdata('level') == 'siswa'){
-
-                    redirect('isi_beasiswa');
+                    redirect('biodata_siswa');
                 }
             }
             else{
-
-                
                 $this->session->set_flashdata('message', 'Password salah');
                 redirect('login');
             }
@@ -51,7 +45,6 @@
         
         public function proses_logout(){
             $this->session->sess_destroy();
-           
             redirect('login','refresh');
         }
     }
