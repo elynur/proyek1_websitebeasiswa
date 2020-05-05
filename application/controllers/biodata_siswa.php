@@ -13,7 +13,9 @@
         }
         public function index(){
             $data['title'] = "Biodata Siswa";
-            //$data['siswa']=$this->bioSiswa_model->getSiswabyId($nisn);
+            $nisn = $this->session->userdata('nisn'); 
+            $data['siswa']=$this->bioSiswa_model->getSiswabyId($nisn);
+            
             $this->load->view('template/header2');
             $this->load->view('siswa/biodata_siswa', $data);
             $this->load->view('template/footer2');
@@ -21,36 +23,34 @@
 
         public function tambah(){
             $data['title']='Tambah Data';
+            $nisn = $this->session->userdata('nisn'); 
+            $data['siswa']=$this->bioSiswa_model->getSiswabyId($nisn);
+
             $this->load->view('template/header2',$data);
-            $this->load->view('siswa/biodata_siswa',$data);
-            $this->load->view('template/footer2');
-            
-            if( $this->input->post('nisn') ){
-                $this->akun_model->tambahBio();
-                $this->session->set_flashdata('flash-data', 'ditambah');
-                redirect('siswa/biodata_siswa','refresh');
-        
-            }
+            $this->load->view('siswa/tambah_biodata',$data);
+            $this->load->view('template/footer2');   
         }
-        public function edit($nisn){
-            if ( $param ) { // apakah parameter memiliki nilai ?
-                // @TODO 2 
-                $data['title']='Edit Biodata Siswa';
-                $data['identitas'] = $this->bioSiswa_model->getSiswaByID( $param );
+
+        public function tambahBaru(){
+            $this->bioSiswa_model->tambahBio();
+            $this->session->set_flashdata('flash-data','ditambahkan');
+            redirect('biodata_siswa','refresh');  
+        }
+
+        public function edit(){
+            $data['title']='Edit Data';
+            $nisn = $this->session->userdata('nisn'); 
+            $data['siswa']=$this->bioSiswa_model->getSiswabyId($nisn);
+           
+            $this->load->view('template/header2',$data);
+            $this->load->view('siswa/siswa_edit',$data);
+            $this->load->view('template/footer2');
     
-                $this->load->view('template/header',$data);
-                $this->load->view('siswa/siswa_edit',$data);
-                $this->load->view('template/footer');
-    
-                if ( $this->input->post('nisn', true)) {
-                    $this->M_prodi->editBio();
-                    $this->session->set_flashdata('flash-data', 'diedit');
-    
-                    redirect('siswa/biodata_siswa','refresh');
-                }
-            } else {
-                echo "Hayoo mau ngapain ? cari bug yaa";
-            }
+        }
+        public function editBio(){
+            $this->bioSiswa_model->edit();
+            $this->session->set_flashdata('flash-data','diedit');
+            redirect('biodata_siswa','refresh');  
         }
     }
     

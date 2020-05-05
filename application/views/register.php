@@ -30,6 +30,12 @@
       <form action="<?php echo base_url('register/proses_register');?>" method="POST">
           <div class="form-group">
             <div class="form-label-group">
+                NISN
+              <input type="text" name="nisn" id="inputNisn" class="form-control input_user" value="" placeholder="nisn" required="required">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label-group">
                 Name
               <input type="text" name="nama" id="inputName" class="form-control input_user" value="" placeholder="name" required="required">
             </div>
@@ -49,13 +55,13 @@
           <div class="form-group">
             <div class="form-label-group">
                 Password
-                <input type="text" name="password" id="inputPassword" class="form-control input_user" value="" placeholder="password" required="required">
+                <input type="password" name="password" id="inputPassword" class="form-control input_user" value="" placeholder="password" required="required">
             </div>
           </div>
           <div class="form-group">
             <div class="form-label-group">
                 Confirm Password
-                <input type="text" name="confirmpassword" id="inputconfirmPassword" class="form-control input_user" value="" placeholder="confirmpassword" required="required">
+                <input type="password" name="confirmpassword" id="inputconfirmPassword" class="form-control input_user" value="" placeholder="confirmpassword" required="required">
             </div>
           </div>
           <button type="submit" class="btn btn-success btn-lg float-right" id="btnlogin">DAFTAR</button>

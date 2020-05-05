@@ -25,16 +25,15 @@
                 foreach ($ceklogin as $row);
                 $arr = array(
                     'level' => $row['level'],
-                    'nisn' => $row['username'],
-                    'password' => $row['password']
+                    'username' => $row['username'],
+                    'password' => $row['password'],
+                    'nisn' => $row['nisn']
                 );
                 $this->session->set_userdata($arr);
                 if ($row['level'] == "admin") {
                     redirect('berkas');
-                    // echo $row['level'];
                 } else {
                     redirect('biodata_siswa');
-                    // echo $row['level'];
                 }
             } else {
                 $this->session->set_flashdata('message', 'Password salah');

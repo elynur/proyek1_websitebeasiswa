@@ -7,11 +7,11 @@
             <div class="card-body">
             <div class="table-responsive">
              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-             <?php echo form_open('biodata_siswa/editBio'); ?>
+             <?php echo form_open('biodata_siswa/tambahBaru'); ?>
              <form method="POST">
                 <tr>
                   <td> NISN : </td>
-                  <td><input type="text" class="form-control" id="id" name="id" value="<?= $siswa["nisn"]?>"></td>
+                  <td><input type="text" class="form-control" id="nisn"  name="nisn"></td>
               </tr>
               <tr>
                   <td> Nama : </td>
@@ -47,7 +47,7 @@
               </tr>
               </table>
             </div>
-            <button type="submit" name="submit" class="btn btn-danger">Edit</button>
+            <button type="submit" name="submit" class="btn btn-danger">Tambah</button>
             </form>
           </div>
         </div>

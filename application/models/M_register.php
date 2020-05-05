@@ -8,6 +8,7 @@
         function proses_register(){
             $data=[
                 "name" => $this->input->post('nama', true),
+                "nisn" => $this->input->post('nisn', true),
                 "email" => $this->input->post('email', true),
                 "username" => $this->input->post('username', true),
                 "password" => $this->input->post('password', true),
