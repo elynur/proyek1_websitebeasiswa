@@ -30,7 +30,6 @@
             ];
             $this->db->insert('siswa', $data);
             redirect('biodata_siswa','refresh');
-            
         }
         public function edit(){
             $data=[
@@ -44,11 +43,8 @@
                 "asal_sekolah" => $this->input->post('asal_sekolah', true),
                 "jurusan_sekolah" => $this->input->post('jurusan_sekolah', true)
             ];
-    
-            // ambil id_jurusan berdasarkan parameter id
-            $getSiswa = $this->input->get('nisn');
-            $this->db->where('nisn', $getSiswa)->update('siswa', $data);
-            redirect('biodata_siswa','refresh');
+            $this->db->where('nisn', $this->input->post('nisn'));
+            $this->db->update('siswa', $data);
             
         }
     }

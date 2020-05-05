@@ -49,7 +49,10 @@
                 <?php } ?>
               </table>
             </div>
-            <a href="<?php echo base_url()?>biodata_siswa/tambah" class="btn btn-primary">Tambah Data Diri</a>
+            <?php 
+              if ($siswa['nisn'] == null) {?>
+                <a href="<?php echo base_url()?>biodata_siswa/tambah" class="btn btn-primary">Tambah Data Diri</a>
+              <?php }?>
             <a href="<?php echo base_url()?>biodata_siswa/edit" class="btn btn-success" >Edit</a>
           </div>
         </div>
