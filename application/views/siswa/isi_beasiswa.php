@@ -3,36 +3,37 @@
         <div class="card mb-3">
           <div class="card-header">
             <i class="fas fa-table"></i>
-            Data Pendaftaran Beasiswa</div>
-          <div class="card-body">
-          <h4><b style="color:red;">Data yang sudah diisi, tidak bisa dirubah</b></h4><br>
+            Biodata Siswa</div>
+            <div class="card-body">
             <div class="table-responsive">
              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <form action="addBeasiswa" method="POST">
+             <?php echo form_open('isi_beasiswa/tambah'); ?>
+                <form method="POST">
+                <?php foreach($siswa as $siswa){ ?>
                 <tr>
                   <td> NISN : </td>
-                  <td></td>
+                  <td type="nisn"><?=$siswa['nisn'];?></td>
               </tr>
               <tr>
                   <td> Nama : </td>
-                  <td> <input type="text" name="nama" class="form-control"></td>
+                  <td type="nama_siswa"><?=$siswa['nama_siswa'];?></td>
               </tr>
               <tr>
                   <td> Asal Sekolah : </td>
-                  <td> <input type="text" name="asal_sekolah" class="form-control"></td>
-              </tr>
-              <tr>
-                  <td> Nilai Rata Rata UN: </td>
-                  <td> <input type="text" name="rata_un" class="form-control"></td>
+                  <td type="asal_sekolah"><?=$siswa['asal_sekolah'];?></td>
               </tr>
               <tr>
                   <td> Jurusan Sekolah : </td>
-                  <td> <input type="text" name="jrsn_sekolah" class="form-control"></td>
+                  <td><?=$siswa['jurusan_sekolah'];?></td>
+              </tr>
+              <tr>
+                  <td> Nilai Rata UN : </td>
+                  <td><input type="text" class="form-control" id="nilai_rata" name="nilai_rata" value="<?= $siswa['nilai_rata']?>"></td>
               </tr>
               <tr>
                   <td> Politeknik Pilihan : </td>
                   <td> 
-                    <select name="" id="" class="form-control">
+                    <select name="politeknik_id" id="politeknik_id" class="form-control">
                       <?php foreach( $getDataPoliteknik AS $rowPoliteknik ) { ?>
                       <option value=""><?php echo $rowPoliteknik['nama_politeknik'] ?></option>
                       <?php } ?>
@@ -41,17 +42,17 @@
               </tr>
               <tr>
                   <td> Prodi Pilihan : </td>
-                  <td>
-                  <select name="" id="" class="form-control">
+                  <td> 
+                    <select name="prodi_id" id="prodi_id" class="form-control">
                       <?php foreach( $getDataProdi AS $rowProdi ) { ?>
                       <option value=""><?php echo $rowProdi['nama_prodi'] ?></option>
                       <?php } ?>
                     </select>
                   </td>
               </tr>
-              </table>
-              <button type="submit" name="submit" class="btn btn-primary">Tambah</button></div> 
-          </form>
+              <button type="submit" name="submit" class="btn btn-primary">Tambah Data Beasiswa</button><br><br>
+                </form>
+                <?php } ?>
               </table>
             </div>
           </div>
@@ -60,18 +61,6 @@
       </div>
       <!-- /.container-fluid -->
 
-      <!-- Sticky Footer -->
-      <footer class="sticky-footer">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Copyright © 2020</span>
-          </div>
-        </div>
-      </footer>
-
-    </div>
-    <!-- /.content-wrapper -->
-    
       <!-- Sticky Footer -->
       <footer class="sticky-footer">
         <div class="container my-auto">

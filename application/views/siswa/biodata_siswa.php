@@ -15,7 +15,7 @@
               </tr>
               <tr>
                   <td> Nama : </td>
-                  <td><?=$siswa['alamat_siswa'];?></td>
+                  <td><?=$siswa['nama_siswa'];?></td>
               </tr>
               <tr>
                   <td>Foto : </td>

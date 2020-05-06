@@ -4,29 +4,30 @@
     
     class isiBeasiswa_model extends CI_Model {
 
-        public function getSiswabyId($id){
-            $this->db->select('*');
-            $this->db->where('id_user'=> $id);
-            $this->db->from('siswa');
-            $this->db->distinct();
-            $this->db->join('politeknik','politeknik.id_politeknik = siswa.politeknik_id');
-            $this->db->join('prodi','prodi.id_prodi = siswa.prodi_id');
+        public function getSiswabyId($nisn){
+            $query=$this->db->get_where('siswa', array('nisn' => $nisn));
+            return $query->result_array();
 
-            $query = $this->db->get();
-            return $query->row_array();
+            // $this->db->select('*');
+            // $this->db->where('nisn');
+            // $this->db->from('siswa');
+            // $this->db->distinct();
+            // $this->db->join('politeknik','politeknik.id_politeknik = siswa.politeknik_id');
+            // $this->db->join('prodi','prodi.id_prodi = siswa.prodi_id');
+
+            // $query = $this->db->get();
+            // return $query->result_array();
         }
-    
-        public function tambahBio(){
-            $data=[
-                "nama_siswa" => $this->input->post('nama_siswa', true),
-                "asal_sekolah" => $this->input->post('asal_sekolah', true),
-                "jurusan_sekolah" => $this->input->post('jurusan_sekolah', true),
+        
+        public function tambahBaru(){
+            $data=array(
                 "nilai_rata" => $this->input->post('nilai_rata', true),
                 "politeknik_id" => $this->input->post('politeknik_id', true),
-                "prodi" => $this->input->post('prodi_id', true)
-            ];
-    
+                "prodi_id" => $this->input->post('prodi_id', true)
+            );
             $this->db->insert('siswa', $data);
+            redirect('isi_beasiswa','refresh');
+            
         }        
     
     }
