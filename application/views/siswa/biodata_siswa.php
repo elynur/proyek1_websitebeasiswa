@@ -19,7 +19,7 @@
               </tr>
               <tr>
                   <td>Foto : </td>
-                  <td><button>upload</button></td>
+                  <td><?=$siswa['foto'];?></td>
               </tr>
               <tr>
                   <td> Alamat : </td>
@@ -50,10 +50,11 @@
               </table>
             </div>
             <?php 
-              if ($siswa['nisn'] == null) {?>
+              if ($siswa['nama_siswa'] == null) {?>
                 <a href="<?php echo base_url()?>biodata_siswa/tambah" class="btn btn-primary">Tambah Data Diri</a>
-              <?php }?>
+              <?php }else {?>
             <a href="<?php echo base_url()?>biodata_siswa/edit" class="btn btn-success" >Edit</a>
+              <?php }?>
           </div>
         </div>
 

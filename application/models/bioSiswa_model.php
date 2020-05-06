@@ -33,20 +33,19 @@
         }
         public function edit(){
             $data=[
-                "nisn" => $this->input->post('nisn', true),
-                "nama_siswa" => $this->input->post('nama_siswa', true),
-                "foto" => $this->input->post('foto'),
-                "alamat_siswa" => $this->input->post('alamat_siswa', true),
-                "nama_orangtua" => $this->input->post('nama_orangtua',true),
-                "email" => $this->input->post('email', true),
-                "no_telepon" => $this->input->post('no_telepon', true),
-                "asal_sekolah" => $this->input->post('asal_sekolah', true),
-                "jurusan_sekolah" => $this->input->post('jurusan_sekolah', true)
+                'nisn' => $this->input->post('nisn', true),
+                'nama_siswa' => $this->input->post('nama_siswa', true),     
+                'foto' => $this->input->post('foto'),
+                'alamat_siswa' => $this->input->post('alamat_siswa', true),
+                'nama_orangtua' => $this->input->post('nama_orangtua',true),
+                'email' => $this->input->post('email', true),
+                'no_telepon' => $this->input->post('no_telepon', true),
+                'asal_sekolah' => $this->input->post('asal_sekolah', true),
+                'jurusan_sekolah' => $this->input->post('jurusan_sekolah', true)
             ];
             $this->db->where('nisn', $this->input->post('nisn'));
             $this->db->update('siswa', $data);
-            
-        }
+            }
     }
     
     /* End of file bioSiswa_model.php */
