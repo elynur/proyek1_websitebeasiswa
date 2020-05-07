@@ -7,42 +7,40 @@
             <div class="card-body">
             <div class="table-responsive">
              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-             <form action="addBeasiswa" method="POST">
-                <?php foreach($siswa as $siswa){ ?>
+             <?php echo form_open('isi_beasiswa/tambahBaru'); ?>
+                <form method="POST">
                 <tr>
                   <td> NISN : </td>
-                  <td name="nisn"><?=$siswa['nisn'];?></td>
-              </tr>
-              <tr>
-                  <td> Nama : </td>
-                  <td name="nama_siswa"><?=$siswa['nama_siswa'];?></td>
-              </tr>
-              <tr>
-                  <td> Asal Sekolah : </td>
-                  <td name="asal_sekolah"><?=$siswa['asal_sekolah'];?></td>
-              </tr>
-              <tr>
-                  <td> Jurusan Sekolah : </td>
-                  <td><?=$siswa['jurusan_sekolah'];?></td>
+                  <td><input type="text" class="form-control" id="nisn" name="nisn"></td>
               </tr>
               <tr>
                   <td> Nilai Rata UN : </td>
-                  <td><?=$siswa['nilai_rata'];?></td>
+                  <td><input type="text" class="form-control" id="nilai_rata" name="nilai_rata"></td>
               </tr>
               <tr>
                   <td> Politeknik Pilihan : </td>
-                  <td><?=$siswa['politeknik_id'];?></td>
+                  <td> 
+                    <select name="politeknik_id" id="politeknik_id" class="form-control">
+                      <?php foreach( $getDataPoliteknik AS $rowPoliteknik ) { ?>
+                      <option value=""><?php echo $rowPoliteknik['id_politeknik'];?></option>
+                      <?php } ?>
+                    </select>
+                  </td>
               </tr>
               <tr>
                   <td> Prodi Pilihan : </td>
-                  <td><?= $siswa['politeknik_id']; ?></td>
+                  <td> 
+                    <select name="prodi_id" id="prodi_id" class="form-control">
+                      <?php foreach( $getDataProdi AS $rowProdi ) { ?>
+                      <option value=""><?php echo $rowProdi['id_prodi'] ?></option>
+                      <?php } ?>
+                    </select>
+                  </td>
               </tr>
-                </form>
-                <?php } ?>
               </table>
             </div>
-                <a href="<?php echo base_url('isi_beasiswa/tambah')?>" class="btn btn-primary">Tambah Data Beasiswa</a>
-          </div>
+            <button type="submit" name="submit" class="btn btn-danger">Tambah Data</button><br><br>
+            </form></div>
         </div>
 
       </div>

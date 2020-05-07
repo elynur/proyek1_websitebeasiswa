@@ -19,13 +19,15 @@
             // return $query->result_array();
         }
         
-        public function tambahBaru(){
-            $data=array(
+        public function tambahData(){
+            $data=[
+                'nisn' => $this->input->post('nisn', true),
                 "nilai_rata" => $this->input->post('nilai_rata', true),
                 "politeknik_id" => $this->input->post('politeknik_id', true),
                 "prodi_id" => $this->input->post('prodi_id', true)
-            );
-            $this->db->insert('siswa', $data);
+            ];
+            $this->db->where('nisn', $this->input->post('nisn'));
+            $this->db->update('siswa', $data);
             redirect('isi_beasiswa','refresh');
             
         }        

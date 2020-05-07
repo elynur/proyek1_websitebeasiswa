@@ -49,12 +49,8 @@
                 <?php } ?>
               </table>
             </div>
-            <?php 
-              if ($siswa['nama_siswa'] == null) {?>
                 <a href="<?php echo base_url()?>biodata_siswa/tambah" class="btn btn-primary">Tambah Data Diri</a>
-              <?php }else {?>
             <a href="<?php echo base_url()?>biodata_siswa/edit" class="btn btn-success" >Edit</a>
-              <?php }?>
           </div>
         </div>
 
