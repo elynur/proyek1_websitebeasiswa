@@ -22,7 +22,7 @@
                   <td> 
                     <select name="politeknik_id" id="politeknik_id" class="form-control">
                       <?php foreach( $getDataPoliteknik AS $rowPoliteknik ) { ?>
-                      <option value=""><?php echo $rowPoliteknik['id_politeknik'];?></option>
+                      <option value=""><?php echo $rowPoliteknik['nama_politeknik'];?></option>
                       <?php } ?>
                     </select>
                   </td>
@@ -32,7 +32,7 @@
                   <td> 
                     <select name="prodi_id" id="prodi_id" class="form-control">
                       <?php foreach( $getDataProdi AS $rowProdi ) { ?>
-                      <option value=""><?php echo $rowProdi['id_prodi'] ?></option>
+                      <option value=""><?php echo $rowProdi['nama_prodi'] ?></option>
                       <?php } ?>
                     </select>
                   </td>
