@@ -2,7 +2,7 @@
     
     defined('BASEPATH') OR exit('No direct script access allowed');
     
-    class register extends CI_Controller {
+    class Register extends CI_Controller {
 
         public function __construct(){
             //Do your magic here

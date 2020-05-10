@@ -2,13 +2,13 @@
     
     defined('BASEPATH') OR exit('No direct script access allowed');
     
-    class login extends CI_Controller {
+    class Login extends CI_Controller {
     
         public function __construct(){
             parent::__construct();
             $this->load->helper('url');
             $this->load->helper('form');
-            $this->load->model('login_model');
+            $this->load->model('LoginModel');
         }
         
         public function index(){
@@ -19,7 +19,7 @@
             $username = htmlspecialchars($this->input->post('username'));
             $password = htmlspecialchars($this->input->post('password'));
     
-            $ceklogin = $this->login_model->processLogin($username, $password);
+            $ceklogin = $this->LoginModel->processLogin($username, $password);
     
             if ($ceklogin) {
                 foreach ($ceklogin as $row);
@@ -31,9 +31,9 @@
                 );
                 $this->session->set_userdata($arr);
                 if ($row['level'] == "admin") {
-                    redirect('berkas');
+                    redirect('Berkas');
                 } else {
-                    redirect('biodata_siswa');
+                    redirect('BiodataSiswa');
                 }
             } else {
                 $this->session->set_flashdata('message', 'Password salah');

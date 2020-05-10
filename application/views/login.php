@@ -52,7 +52,7 @@ form_open('login/proses_login');
     </div>
   </div>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
   <div class="container">
     <a class="navbar-brand" href="welcome" style="margin-left:380px;">BEASISWA PENDIDIKAN BUKIT ASAM</a>
    

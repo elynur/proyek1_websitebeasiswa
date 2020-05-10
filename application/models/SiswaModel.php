@@ -2,7 +2,7 @@
     
     defined('BASEPATH') OR exit('No direct script access allowed');
     
-    class siswa_model extends CI_Model {
+    class SiswaModel extends CI_Model {
 
         public function getAllsiswa(){
             $this->db->select('*');

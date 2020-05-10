@@ -2,7 +2,7 @@
     
     defined('BASEPATH') OR exit('No direct script access allowed');
     
-    class isiBeasiswa_model extends CI_Model {
+    class IsiBeasiswaModel extends CI_Model {
 
         public function getSiswabyId($nisn){
             $query=$this->db->get_where('siswa', array('nisn' => $nisn));
@@ -28,7 +28,7 @@
             ];
             $this->db->where('nisn', $this->input->post('nisn'));
             $this->db->update('siswa', $data);
-            redirect('isi_beasiswa','refresh');
+            redirect('IsiBeasiswa','refresh');
             
         }        
     

@@ -7,7 +7,7 @@
             <div class="card-body">
             <div class="table-responsive">
              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-             <?php echo form_open('isi_beasiswa/tambahBaru'); ?>
+             <?php echo form_open('IsiBeasiswa/tambahBaru'); ?>
                 <form method="POST">
                 <tr>
                   <td> NISN : </td>

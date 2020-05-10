@@ -9,8 +9,11 @@ class M_Politeknik extends CI_Model {
     function getDataPoliteknik() {
         // return $this->db->get('politeknik')->result_array();
 
-        $this->db->select('nama_politeknik');
+        $this->db->select('*');
         $this->db->from('politeknik');
+
+        $query = $this->db->get();
+        return $query->result_array();
     }
 
 }

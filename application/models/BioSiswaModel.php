@@ -3,7 +3,7 @@
     
     defined('BASEPATH') OR exit('No direct script access allowed');
     
-    class bioSiswa_model extends CI_Model {
+    class BioSiswaModel extends CI_Model {
         
         public function __construct()
         {
@@ -29,7 +29,7 @@
                 "jurusan_sekolah" => $this->input->post('jurusan_sekolah', true)
             ];
             $this->db->insert('siswa', $data);
-            redirect('biodata_siswa','refresh');
+            redirect('BiodataSiswa','refresh');
         }
         public function edit(){
             $data=[

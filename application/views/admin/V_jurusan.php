@@ -9,7 +9,7 @@
             Data Jurusan</div>
           <div class="card-body">
             <div class="table-responsive">
-            <a href="<?php echo base_url('jurusan/tambah/')?>" class="btn btn-primary mb-3">Tambah Jurusan</a>
+            <a href="<?php echo base_url('Jurusan/tambah/')?>" class="btn btn-primary mb-3">Tambah Jurusan</a>
               <table class="table table-bordered" id="datatable" width="100%" cellspacing="0">
                 <thead>
                   <tr>
@@ -28,8 +28,8 @@
                         <td><?= $rowData['nama_jurusan']?></td>
                         <td><?= $rowData['nama_politeknik']?></td>
                         <td>
-                          <a href="<?php echo base_url('jurusan/edit/'.$rowData['id_jurusan'])?>" class="badge badge-success">Edit</a>
-                          <a href="<?php echo base_url('jurusan/hapus/'. $rowData['id_jurusan']) ?>" onclick="return confirm('Are you sure you want to delete this item?');"
+                          <a href="<?php echo base_url('Jurusan/edit/'.$rowData['id_jurusan'])?>" class="badge badge-success">Edit</a>
+                          <a href="<?php echo base_url('Jurusan/hapus/'. $rowData['id_jurusan']) ?>" onclick="return confirm('Are you sure you want to delete this item?');"
                             class="badge badge-danger">Delete</a>
                         </td>
                       </tr>

@@ -2,7 +2,7 @@
     
     defined('BASEPATH') OR exit('No direct script access allowed');
     
-    class berkas_model extends CI_Model {
+    class BerkasModel extends CI_Model {
 
         public function getAllberkas(){
             $this->db->select('*');

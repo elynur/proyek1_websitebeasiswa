@@ -2,10 +2,11 @@
     
     defined('BASEPATH') OR exit('No direct script access allowed');
     
-    class upload_berkas extends CI_Controller {
+    class UploadBerkas extends CI_Controller {
+
         $this->load->helper(array('form', 'url'));
         $this->load->library('upload');
-        $this->load->model('berkas_model');
+        $this->load->model('BerkasModel');
         $this->load->library('form_validation');
         $this->load->library('session');
 

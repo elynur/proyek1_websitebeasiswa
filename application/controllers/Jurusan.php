@@ -22,7 +22,7 @@ class Jurusan extends CI_Controller {
             $data['data'] = $this->M_jurusan->getDataJurusan();
            
             $this->load->view('template/header');
-            $this->load->view('admin/V_jurusan', $data);
+            $this->load->view('admin/v_jurusan', $data);
             $this->load->view('template/footer');
     }
 
@@ -42,7 +42,7 @@ class Jurusan extends CI_Controller {
                 $this->M_jurusan->editJurusan();
                 $this->session->set_flashdata('flash-data', 'diedit');
 
-                redirect('jurusan/index','refresh');
+                redirect('Jurusan/index','refresh');
             }
         } else {
 
@@ -55,7 +55,7 @@ class Jurusan extends CI_Controller {
             // $data['identitas'] = $this->M_jurusan->getJurusanByID( $param );
             $this->M_jurusan->actDelete( $param );
             
-            redirect('jurusan/index','refresh');
+            redirect('Jurusan/index','refresh');
         }
     }
 
@@ -73,7 +73,7 @@ class Jurusan extends CI_Controller {
             $this->M_jurusan->tambahJurusan();
             $this->session->set_flashdata('flash-data', 'ditambah');
                 
-            redirect('jurusan/index','refresh');
+            redirect('Jurusan/index','refresh');
     
         }
     }

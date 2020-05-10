@@ -2,7 +2,7 @@
     
     defined('BASEPATH') OR exit('No direct script access allowed');
     
-    class beasiswa_model extends CI_Model {
+    class BeasiswaModel extends CI_Model {
     
         public function getAllbeasiswa(){
             $this->db->select('*');

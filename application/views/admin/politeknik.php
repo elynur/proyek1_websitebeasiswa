@@ -17,7 +17,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <?php
+                 <?php
                     $i = 1;
                     foreach($data as $rowData){?>
                       <tr>

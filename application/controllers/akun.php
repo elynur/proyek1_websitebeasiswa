@@ -7,14 +7,14 @@
         public function __construct(){
             parent::__construct();
             //Do your magic here
-            $this->load->model('akun_model');
+            $this->load->model('AkunModel');
             $this->load->library('form_validation');
             $this->load->library('session');
         }
 
         public function index(){
             $data['title'] = "Data Akun";
-            $data['akun'] = $this->akun_model->getAllakun();
+            $data['akun'] = $this->AkunModel->getAllakun();
 
             $this->load->view('template/header');
             $this->load->view('admin/akun', $data);
@@ -36,16 +36,16 @@
 
                 // @TODO 2 
                 $data['title']='Edit Akun';
-                $data['identitas'] = $this->akun_model->getakunById( $param );
+                $data['identitas'] = $this->AkunModel->getakunById( $param );
 
                 $this->load->view('template/header',$data);
                 $this->load->view('account/edit',$data);
                 $this->load->view('template/footer');
             
                 if( $this->input->post('email') ){
-                    $this->akun_model->editAkun();
+                    $this->AkunModel->editAkun();
                     $this->session->set_flashdata('flash-data', 'diedit');
-                    redirect('akun/index','refresh');    
+                    redirect('Akun/index','refresh');    
                 }  
 
             } else {
@@ -62,19 +62,19 @@
             
             if( $this->input->post('email') ){
          
-                $this->akun_model->tambahAkun();
+                $this->AkunModel->tambahAkun();
                 $this->session->set_flashdata('flash-data', 'ditambah');
                     
-                redirect('akun/index','refresh');
+                redirect('Akun/index','refresh');
         
             }
         }
 
         public function hapus( $param = null ){
             if ( $param ) {
-                $this->akun_model->actDelete( $param );
+                $this->AkunModel->actDelete( $param );
                 
-                redirect('akun/index','refresh');
+                redirect('Akun/index','refresh');
             }
         }
 

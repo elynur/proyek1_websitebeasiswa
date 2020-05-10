@@ -37,17 +37,17 @@
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
         <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('biodata_siswa') ?>">
+        <a class="nav-link" href="<?php echo base_url('BiodataSiswa') ?>">
           <i class="fas fa-users"></i>
           <span>Data Diri</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('isi_beasiswa') ?>">
+        <a class="nav-link" href="<?php echo base_url('IsiBeasiswa') ?>">
           <i class="fas fa-book-open"></i>
           <span>Data Beasiswa</span></a>
       </li>
         <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('upload_berkas') ?>">
+        <a class="nav-link" href="<?php echo base_url('UploadBerkas') ?>">
           <i class="fas fa-users"></i>
           <span>Upload Berkas</span></a>
       </li>

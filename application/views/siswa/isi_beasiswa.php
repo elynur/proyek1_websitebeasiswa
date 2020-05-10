@@ -41,7 +41,7 @@
                 <?php } ?>
               </table>
             </div>
-                <a href="<?php echo base_url('isi_beasiswa/tambah')?>" class="btn btn-primary">Tambah Data Beasiswa</a>
+                <a href="<?php echo base_url('IsiBeasiswa/tambah')?>" class="btn btn-primary">Tambah Data Beasiswa</a>
           </div>
         </div>
 
