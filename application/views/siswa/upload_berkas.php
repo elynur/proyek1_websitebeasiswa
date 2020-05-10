@@ -23,7 +23,7 @@
               <tr>
                   <td> Ijazah </td>
                   <td><?=$bk['ijasah'];?></td>
-                  <td><button type="submit" class="btn btn-success">Upload</button></td>
+                  <td><a type="submit" class="btn btn-success" href=<?php echo base_url('UploadBerkas/upload')?>>Upload</a></td>
               </tr>
               <tr>
                   <td> Kartu Keluarga </td>
