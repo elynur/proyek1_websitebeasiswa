@@ -15,6 +15,8 @@
             $data['title'] = "Biodata Siswa";
             $nisn = $this->session->userdata('nisn'); 
             $data['siswa']=$this->BioSiswaModel->getSiswabyId($nisn);
+
+            $data['cekBiodata'] = $this->BioSiswaModel->cekBiodata( $nisn ); 
             
             $this->load->view('template/header2');
             $this->load->view('siswa/biodata_siswa', $data);
@@ -37,6 +39,7 @@
             redirect('BiodataSiswa','refresh');  
         }
 
+        // view
         public function edit(){
             $data['title']='Edit Data';
             $nisn = $this->session->userdata('nisn'); 
@@ -47,11 +50,17 @@
             $this->load->view('template/footer2');
     
         }
+
+        // action - update
         public function editBio(){
             $this->BioSiswaModel->edit();
             $this->session->set_flashdata('flash-data','diedit');
             redirect('BiodataSiswa','refresh');  
         }
+
+
+
+        
     }
     
     /* End of file biodata_siswa.php */

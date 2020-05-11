@@ -15,6 +15,8 @@
 
 <!-- Custom styles for this template-->
 <link href="<?= base_url() ?>assets/css/sb-admin.css" rel="stylesheet">
+
+<script src="<?= base_url()?>assets/vendor/jquery/jquery.min.js"></script>
 </head>
 <body id="page-top">
   <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
@@ -35,21 +37,30 @@
   <div id="wrapper">
 
     <!-- Sidebar -->
+
+    
+       
     <ul class="sidebar navbar-nav">
-        <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('BiodataSiswa') ?>">
-          <i class="fas fa-users"></i>
-          <span>Data Diri</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('IsiBeasiswa') ?>">
-          <i class="fas fa-book-open"></i>
-          <span>Data Beasiswa</span></a>
-      </li>
-        <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('UploadBerkas') ?>">
-          <i class="fas fa-users"></i>
-          <span>Upload Berkas</span></a>
-      </li>
+
+    	<li class="nav-item">
+    		<a class="nav-link" href="<?php echo base_url('DashboardSiswa') ?>">
+    			<i class="fas fa-users"></i>
+    			<span>Home</span></a>
+    	</li>
+    	<li class="nav-item">
+    		<a class="nav-link" href="<?php echo base_url('BiodataSiswa') ?>">
+    			<i class="fas fa-users"></i>
+    			<span>Data Diri</span></a>
+    	</li>
+    	<li class="nav-item">
+    		<a class="nav-link" href="<?php echo base_url('IsiBeasiswa') ?>">
+    			<i class="fas fa-book-open"></i>
+    			<span>Data Beasiswa</span></a>
+    	</li>
+    	<li class="nav-item">
+    		<a class="nav-link" href="<?php echo base_url('UploadBerkas') ?>">
+    			<i class="fas fa-users"></i>
+    			<span>Upload Berkas</span></a>
+    	</li>
     </ul>
     <div id="content-wrapper">

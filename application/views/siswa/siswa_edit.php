@@ -48,7 +48,7 @@
               </tr>
               </table>
             </div>
-            <button type="submit" name="submit" class="btn btn-danger">Edit</button>
+            <button type="submit" name="submit"class="btn btn-warning">Edit Data</button>
             <?php } ?>
             </form>
           </div>

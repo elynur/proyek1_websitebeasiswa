@@ -11,11 +11,11 @@
              <form method="POST">
                 <tr>
                   <td> NISN : </td>
-                  <td><input type="text" class="form-control" id="nisn"  name="nisn"></td>
+                  <td><input type="text" class="form-control" id="nisn"  name="nisn" value="<?php echo $this->session->userdata('nisn') ?>" readonly></td>
               </tr>
               <tr>
                   <td> Nama : </td>
-                  <td><input type="text" class="form-control" id="nama_siswa" name="nama_siswa"></td>
+                  <td><input type="text" class="form-control" id="nama_siswa" name="nama_siswa" value="<?php echo $this->session->userdata('nama') ?>"></td>
               </tr>
               <tr>
                   <td>Foto : </td>
@@ -31,7 +31,7 @@
               </tr>
               <tr>
                   <td> Email : </td>
-                  <td><input type="text" class="form-control" name="email" id="email" ></td>
+                  <td><input type="text" class="form-control" name="email" id="email" value="<?php echo $this->session->userdata('email') ?>" ></td>
               </tr>
               <tr>
                   <td> No Telepon : </td>

@@ -11,14 +11,19 @@
             //Do your magic here
         }
         
-        public function getSiswabyId($nisn){
+        public function getSiswabyId( $nisn ){
             $query=$this->db->get_where('siswa', array('nisn' => $nisn));
             return $query->result_array();
+        }
+
+        function cekBiodata( $nisn ){
+
+            return $this->db->where('nisn', $nisn)->get('siswa');
         }
     
         public function tambahBio(){
             $data=[
-                "nisn" => $this->input->post('nisn', true),
+                "nisn" => $this->session->userdata('nisn'),
                 "nama_siswa" => $this->input->post('nama_siswa', true),
                 "foto" => $this->input->post('foto'),
                 "alamat_siswa" => $this->input->post('alamat_siswa', true),

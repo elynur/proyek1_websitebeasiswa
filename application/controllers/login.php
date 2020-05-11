@@ -26,14 +26,16 @@
                 $arr = array(
                     'level' => $row['level'],
                     'username' => $row['username'],
+                    'nama' => $row['name'],
                     'password' => $row['password'],
+                    'email' => $row['email'],
                     'nisn' => $row['nisn']
                 );
                 $this->session->set_userdata($arr);
                 if ($row['level'] == "admin") {
                     redirect('Berkas');
                 } else {
-                    redirect('BiodataSiswa');
+                    redirect('DashboardSiswa');
                 }
             } else {
                 $this->session->set_flashdata('message', 'Password salah');

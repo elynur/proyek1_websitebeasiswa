@@ -7,7 +7,7 @@
             <div class="card-body">
             <div class="table-responsive">
              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-             <?php echo form_open('IsiBeasiswa/tambahBaru'); ?>
+             <?php echo form_open('IsiBeasiswa/editBeasiswa'); ?>
                 <form method="POST">
                 <tr>
                   <td> NISN : </td>
@@ -15,7 +15,7 @@
               </tr>
               <tr>
                   <td> Nilai Rata UN : </td>
-                  <td><input type="text" class="form-control" id="nilai_rata" name="nilai_rata"></td>
+                  <td><input type="text" class="form-control" id="nilai_rata" name="nilai_rata" value="<?= $siswa[0]['nilai_rata']?>"></td>
               </tr>
               <tr>
                   <td> Politeknik Pilihan : </td>
@@ -23,7 +23,7 @@
                     <select name="politeknik_id" id="politeknik_id" class="form-control">
                       <option value="">-- Pilih Politeknik --</option>
                       <?php foreach( $getDataPoliteknik AS $rowPoliteknik ) { ?>
-                      <option value="<?php echo $rowPoliteknik['id_politeknik'];?>"><?php echo $rowPoliteknik['nama_politeknik'];?></option>
+                      <option value="<?php echo $rowPoliteknik['id_politeknik'];?>" <?php echo (($rowPoliteknik['id_politeknik'] == $siswa[0]['politeknik_id']) ? 'selected' : '') ?>><?php echo $rowPoliteknik['nama_politeknik'];?></option>
                       <?php } ?>
                     </select>
                   </td>
@@ -46,7 +46,7 @@
               </tr>
               </table>
             </div>
-            <button type="submit" name="submit" class="btn btn-danger">Tambah Data</button><br><br>
+            <button type="submit" name="submit" class="btn btn-warning">Edit Data</button><br><br>
             </form></div>
         </div>
 
@@ -77,6 +77,30 @@
   <script>
 
     $(function(){
+
+      // set value jurusan
+      $.ajax({
+        type : "GET", 
+        url  : "<?php echo base_url('isiBeasiswa/getJurusan') ?>?id_politeknik=<?php echo $siswa[0]['politeknik_id'] ?>&selectjurusan=<?php echo $siswa[0]['jurusan_id'] ?>",
+        dataType: "json",
+        success: function( data ) {
+
+          $('#jurusan_id').html( data.value );
+        }
+      })
+
+      // set value prodi
+      $.ajax({
+        type : "GET", 
+        url  : "<?php echo base_url('isiBeasiswa/getProdi') ?>?id_jurusan=<?php echo $siswa[0]['jurusan_id'] ?>&selectProdi=<?php echo $siswa[0]['prodi_id'] ?>",
+        dataType: "json",
+        success: function( data ) {
+
+          $('#prodi_id').html( data.value );
+        }
+      })
+
+
 
       // event - politeknik 
       $('select[name="politeknik_id"]').change(function(){
