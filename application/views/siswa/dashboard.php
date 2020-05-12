@@ -1,11 +1,10 @@
 <div class="container-fluid">
     
     <div class="jumbotron">
-      <h1 class="display-4">Selamat Datang di Beasiswa BIDIKSIBA</h1>
-      <p class="lead">ini adalah deskripsi bidik siba ? . . ..</p>
+    <p>Halo <b><?php echo $this->session->userdata('nama') ?></b>!</p>
+      <h2 class="display-4">Selamat Datang di Beasiswa BIDIKSIBA</h2>
+      <p class="lead">Beasiswa Pendidikan Siswa Bukit Asam . . ..</p>
       <hr class="">
-      <p>Halo <b><?php echo $this->session->userdata('nama') ?></b>.</p>
-      
     </div>
     <!-- /.container-fluid -->
 

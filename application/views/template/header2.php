@@ -15,6 +15,7 @@
 
 <!-- Custom styles for this template-->
 <link href="<?= base_url() ?>assets/css/sb-admin.css" rel="stylesheet">
+<link rel="stylesheet" href="<?php echo base_url() ?>assets/css/themify-icons.css" />
 
 <script src="<?= base_url()?>assets/vendor/jquery/jquery.min.js"></script>
 </head>

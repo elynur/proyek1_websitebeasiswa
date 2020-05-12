@@ -14,7 +14,14 @@
                 "password" => $this->input->post('password', true),
                 "level" => "siswa"
             ];
+
+            // data default 
+            $dataBerkas = [
+
+                'nisn'  => $this->input->post('nisn', true)
+            ];
             
+            $this->db->insert('berkas', $dataBerkas);
             $this->db->insert('user', $data);
 
         }
