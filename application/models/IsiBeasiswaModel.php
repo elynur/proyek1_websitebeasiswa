@@ -17,6 +17,7 @@
             $this->db->select('*');
             $this->db->from('siswa');
             $this->db->join('politeknik','politeknik.id_politeknik = siswa.politeknik_id');
+            $this->db->join('jurusan','jurusan.id_jurusan = siswa.jurusan_id');
             $this->db->join('prodi','prodi.id_prodi = siswa.prodi_id');
 
             $this->db->where('nisn', $nisn);
@@ -32,14 +33,14 @@
         
         public function tambahData(){
             $data=[
-                'nisn' =>  $this->session->userdata('nisn'),  
+                'nisn' => $this->session->userdata('nisn'),  
                 "nilai_rata" => $this->input->post('nilai_rata', true),
                 "politeknik_id" => $this->input->post('politeknik_id', true),
                 "jurusan_id" => $this->input->post('jurusan_id', true),
                 "prodi_id" => $this->input->post('prodi_id', true)
             ];
             $this->db->where('nisn', $this->input->post('nisn'));
-            $this->db->insert('siswa', $data);
+            $this->db->update('siswa', $data);
             redirect('IsiBeasiswa','refresh');
             
         }      

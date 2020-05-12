@@ -34,6 +34,11 @@
                   <td><?=$siswa['nama_politeknik'];?></td>
               </tr>
               <tr>
+              <tr>
+                  <td> Jurusan Pilihan : </td>
+                  <td><?=$siswa['nama_jurusan'];?></td>
+              </tr>
+              <tr>
                   <td> Prodi Pilihan : </td>
                   <td><?= $siswa['nama_prodi']; ?></td>
               </tr>
