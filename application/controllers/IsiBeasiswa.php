@@ -44,7 +44,7 @@
         }
 
          public function tambahBaru(){
-            $this->IsiBeasiswaModel->tambahdata();
+            $this->IsiBeasiswaModel->tambahData();
             $this->session->set_flashdata('flash-data','ditambahkan');
             redirect('IsiBeasiswa','refresh');  
          }

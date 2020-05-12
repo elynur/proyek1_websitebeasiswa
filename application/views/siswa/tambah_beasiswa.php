@@ -46,7 +46,7 @@
               </tr>
               </table>
             </div>
-            <button type="submit" name="submit" class="btn btn-danger">Tambah Data</button><br><br>
+            <button type="submit" name="submit" class="btn btn-primary">Tambah Data</button><br><br>
             </form></div>
         </div>
 

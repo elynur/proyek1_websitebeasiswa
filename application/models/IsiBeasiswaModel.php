@@ -32,7 +32,7 @@
         
         public function tambahData(){
             $data=[
-                'nisn' => $this->input->post('nisn', true),
+                'nisn' =>  $this->session->userdata('nisn'),  
                 "nilai_rata" => $this->input->post('nilai_rata', true),
                 "politeknik_id" => $this->input->post('politeknik_id', true),
                 "jurusan_id" => $this->input->post('jurusan_id', true),

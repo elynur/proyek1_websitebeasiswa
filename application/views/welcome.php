@@ -71,7 +71,7 @@
                       <br><br><br>
                     <h3 class="font-weight-light" style="font-size: 20px;">Pendaftaran akan segera!!</h3>
                     <h3  class="font-weight-light" style="font-size: 20px;">Bagi yang mau daftar, klik di bawah ini</h3>
-                    <a href="" class="btn btn-danger" style="font-size: 20px;">Daftar Sekarang</a>
+                    <a href="<?php echo base_url('login') ?>" class="btn btn-danger" style="font-size: 20px;">Daftar Sekarang</a>
                     </div>
                   </div>
               </div>
