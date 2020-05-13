@@ -23,7 +23,7 @@
 
         function actProcessAnnouncement(){
 
-            $this->
+            // $this->
         }
     
     }

@@ -58,8 +58,9 @@
             redirect('BiodataSiswa','refresh');  
         }
 
-
-
+        function actProcessUpload($section){
+            $this->Upload_berkas->actUploadDocument( $section );
+        }
         
     }
     

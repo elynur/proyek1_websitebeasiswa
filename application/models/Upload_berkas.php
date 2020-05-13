@@ -72,11 +72,6 @@
                 redirect('UploadBerkas');
             }
         }
-
-        
-
-
-
     
     }
     

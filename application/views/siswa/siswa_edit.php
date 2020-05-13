@@ -19,8 +19,56 @@
                   <td><input type="text" class="form-control" id="nama_siswa" name="nama_siswa" value="<?= $siswa['nama_siswa']?>"></td>
               </tr>
               <tr>
-                  <td>Foto : </td>
-                  <td><input type="text"  class="form-control" id="foto" name="foto" value="<?= $siswa['foto']?>"></td>
+              <td>Foto : </td>
+                  <td style="width: 20%;" align="center">
+                  <a href="javascript:;" data-toggle="modal" data-target="#unggahberkas-foto" class="btn btn-block btn-sm btn-info" style="margin-top: 12px" value="<?= $siswa['foto']?>">
+                      Upload Foto
+                  </a>
+
+            <!-- Modal -->
+            <div class="modal fade" id="unggahberkas-foto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Unggah Berkas</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <form action="<?php echo base_url('biodataSiswa/actProcessUpload/foto?format-name=foto-siswa') ?>" method="POST" enctype="multipart/form-data">
+                  <div class="modal-body text-left">
+
+                   <code style="font-weight: bold">Masukan format ekstensi file .jpg | maksimal upload 4 mb</code><hr>
+                    <div class="form-group">
+                      <label for="" class="text-semibold">Masukan foto</label><br>
+                      <input type="file" name="userfile" /> <br>
+                      <small>
+                        
+                        <?php
+
+                          if ( $berkas['foto'] ){
+
+                            echo '<a target="_blank" href="'.base_url('assets/berkas/foto/'. $berkas['foto']).'">Lihat foto</a>';
+                          } else {
+
+                            echo "Masukan foto pada input file diatas";
+                          }
+                        
+                        ?>
+                      </small>
+                    </div>
+                   
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn btn-primary btn-sm">Simpan perubahan</button>
+                  </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
               </tr>
               <tr>
                   <td> Alamat : </td>

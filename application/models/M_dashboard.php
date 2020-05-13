@@ -13,7 +13,7 @@
                 $this->db->insert('pengumuman', $data);
             } else {
                 
-                $this->db->where('id_pengumuman', $getData->row()->id_p)
+                $this->db->where('id_pengumuman', $getData->row()->id_p);
             }
         }
     

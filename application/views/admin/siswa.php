@@ -24,7 +24,7 @@
                     <th>Jurusan Sekolah</th>
                     <th>Politeknik Pilihan</th>
                     <th>Prodi Pilihan</th>
-                    <th>Priveledge</th>
+                    <!-- <th>Priveledge</th> -->
                   </tr>
                 </thead>
                 <tbody>
@@ -43,9 +43,9 @@
                         <td><?= $siswa['jurusan_sekolah']?></td>
                         <td><?= $siswa['nama_politeknik']?></td>
                         <td><?= $siswa['nama_prodi']?></td>
-                        <td>
+                        <!-- <td>
                           <a href="" class="badge badge-success">Konfirm</a>
-                        </td>
+                        </td> -->
                       </tr>
                       <?php } ?>
                 </tbody>
