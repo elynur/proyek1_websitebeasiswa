@@ -15,11 +15,25 @@
         public function index()
         {
             $data['title'] = "Admin";
-            $data['berkas'] = $this->BerkasModel->getAllberkas();
+            $data['getDataSiswa'] = $this->BerkasModel->getDataSiswa();
 
             $this->load->view('template/header');
             $this->load->view('admin/berkas', $data);
             $this->load->view('template/footer');
+        }
+
+
+        function actionConfirmBeasiswa( $code, $nisn = null ) {
+
+            if ( $nisn ) {
+
+                $this->BerkasModel->actConfirmBeasiswa( $nisn, $code );
+                redirect('berkas');
+            } else {
+
+                echo "Hayo ngaps";
+            }
+            
         }
     
     }

@@ -44,6 +44,13 @@
 
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
+      
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url('c_pengumuman') ?>">
+          <i class="fas fa-bullhorn"></i>
+          <span>Pengumuman</span></a>
+      </li>
+
         <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url('berkas') ?>">
           <i class="fas fa-users"></i>
