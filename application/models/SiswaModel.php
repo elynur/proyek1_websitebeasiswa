@@ -14,6 +14,7 @@
             $query = $this->db->get();
             return $query->result_array();
         }
+    }
 
         // function getStatusKelolosan(){
         //     $getStatus = $this->db->get('status_beasiswa');

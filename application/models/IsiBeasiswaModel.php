@@ -16,9 +16,9 @@
 
             $this->db->select('*');
             $this->db->from('siswa');
-            $this->db->join('politeknik','politeknik.id_politeknik = siswa.politeknik_id');
-            $this->db->join('jurusan','jurusan.id_jurusan = siswa.jurusan_id');
-            $this->db->join('prodi','prodi.id_prodi = siswa.prodi_id');
+            $this->db->join('politeknik','politeknik.id_politeknik = siswa.politeknik_id', 'left');
+            $this->db->join('jurusan','jurusan.id_jurusan = siswa.jurusan_id', 'left');
+            $this->db->join('prodi','prodi.id_prodi = siswa.prodi_id', 'left');
 
             $this->db->where('nisn', $nisn);
             $query = $this->db->get();

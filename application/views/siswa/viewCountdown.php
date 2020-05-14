@@ -177,11 +177,7 @@ var Countdown = {
     // Initialize total seconds
     this.total_seconds =  (this.values.days * 24 * 60 * 60) + (this.values.hours * 60 * 60) + (this.values.minutes * 60) + this.total_seconds;
 
-    console.log( "Nilai days : " + (this.values.days * 24 * 60 * 60) );
-    console.log( "Nilai hours : " + (this.values.hours * 60 * 60) );
-    console.log( "Nilai minutes : " + (this.values.minutes * 60) );
-    console.log( "Nilai seconds : " + (this.values.seconds) );
-    console.log( "Total :" + this.total_seconds );
+    
     // Animate countdown to the end 
     this.count();    
   },
@@ -200,26 +196,42 @@ var Countdown = {
     
         this.countdown_interval = setInterval(function() {
 
-        if(that.total_seconds > 0) {
+        if( that.total_seconds > 0) {
 
             --that.values.seconds;              
+            console.log( that.values.seconds );
+            // kondisi 
+            if ( (that.values.days == 0) && (that.values.hours == 0) && (that.values.minutes == 0) && (that.values.seconds >= 0) ) {
 
-            if(that.values.minutes >= 0 && that.values.seconds < 0) {
+                // bagian error
+                that.values.minutes = 0;
+                that.values.hours   = 0;
+                that.values.days    = 0;
 
-                that.values.seconds = 59;
-                --that.values.minutes;
-            }
+                console.log("Masuk kondisi error");
 
-            if(that.values.hours >= 0 && that.values.minutes <= 0) {
+            } else {
 
-                that.values.minutes = 59;
-                --that.values.hours;
-            }
+                console.log( that.values.days +' - '+that.values.hours + '-' + that.values.minutes + ' - '+ that.values.seconds );
+                console.log("Masuk kondisi benar");
 
-            if (that.values.days >= 0 && that.values.hours <= 0) {
+                if(that.values.minutes >= 0 && that.values.seconds < 0) { 
 
-                that.values.hours = 24;
-                --that.values.days;
+                    that.values.seconds = 59;
+                    --that.values.minutes;
+                }
+                if(that.values.hours >= 0 && that.values.minutes <= 0) {
+
+                    that.values.minutes = 59;
+                    --that.values.hours;
+                }
+                
+                if (that.values.days >= 0 && that.values.hours < 0) {
+
+                    that.values.hours = 24;
+                    --that.values.days;
+                }
+
             }
 
             // Update DOM values// Days
@@ -234,6 +246,7 @@ var Countdown = {
             // Seconds
             that.checkHour(that.values.seconds, $sec_1, $sec_2);
 
+        
             --that.total_seconds;
         }
         else {

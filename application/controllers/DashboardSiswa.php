@@ -77,6 +77,27 @@
                 echo "it's not time yet bro ! maksa banget lo";
             }
         }
+
+
+        function cetakkartu() {
+
+            $data['getSiswa'] = $this->BeasiswaModel->getAllbeasiswa( array( 'siswa.nisn' => $this->session->userdata('nisn') ) );
+            
+            $data['Announcement'] = $this->M_dashboard->getAnnouncement();
+            
+            $dateSaatIni    = strtotime(date('Y-m-d H:i:s'));
+            $datePengumuman = strtotime( $data['Announcement']->row()->date );
+            
+            if ( $dateSaatIni >= $datePengumuman ) {
+
+                $this->load->view('siswa/printBeasiswa', $data);
+
+            } else {
+
+                echo "it's not time yet bro ! maksa banget lo";
+            }
+            
+        }
     
     }
     

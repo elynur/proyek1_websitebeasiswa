@@ -15,7 +15,7 @@
 
         public function index(){
             $data['title'] = "Data Siswa";
-            $data['getAllsiswa'] = $this->SiswaModel->getAllsiswa();
+            $data['siswa'] = $this->SiswaModel->getAllsiswa();
            
             $this->load->view('template/header');
             $this->load->view('admin/siswa', $data);

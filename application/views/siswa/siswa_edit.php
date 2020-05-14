@@ -8,7 +8,7 @@
             <div class="table-responsive">
              <table class="table table-bordered" width="100%" cellspacing="0">
              
-             <form method="POST" action="<?php echo base_url('BiodataSiswa/editBio') ?>">
+             <form method="POST" action="<?php echo base_url('BiodataSiswa/editBio?format-name='.(($getDataSiswa->row()->nama_siswa)? $getDataSiswa->row()->nama_siswa : 'SISWA').'') ?>') ?>" enctype="multipart/form-data">
              <?php foreach($siswa as $siswa){ ?>
                 <tr>
                   <td> NISN : </td>
@@ -54,14 +54,8 @@
             </div>
             <button name="submit" class="btn btn-warning">Edit Data</button>
             <?php } ?>
-            </form>
-          </div>
-        </div>
 
-      </div>
-
-
-       <!-- Modal -->
+            <!-- Modal -->
        <div class="modal fade" id="unggahberkas-foto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
@@ -71,7 +65,6 @@
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-                  <form action="<?php echo base_url('biodataSiswa/editBio?format-name='.(($getDataSiswa->row()->nama_siswa)? $getDataSiswa->row()->nama_siswa : 'SISWA').'') ?>" method="POST" enctype="multipart/form-data">
                   <div class="modal-body text-left">
 
                    <code style="font-weight: bold">Masukan format ekstensi file .jpg | maksimal upload 4 mb</code><hr>
@@ -99,10 +92,17 @@
                     <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Batal</button>
                     <button type="submit" class="btn btn-primary btn-sm">Simpan perubahan</button>
                   </div>
-                  </form>
                 </div>
               </div>
             </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+
+       
       <!-- /.container-fluid -->
 
       <!-- Sticky Footer -->

@@ -26,10 +26,16 @@
 
             $data['cekBeasiswa'] = $this->IsiBeasiswaModel->cekBeasiswa( $nisn ); 
             
+           
             $this->load->view('template/header2');
             $this->load->view('siswa/isi_beasiswa', $data);
             $this->load->view('template/footer2');
         }
+
+
+       
+
+
         public function tambah(){
             $data['title']='Tambah Data Beasiswa';
             $data['getDataPoliteknik'] = $this->M_politeknik->getDataPoliteknik();
