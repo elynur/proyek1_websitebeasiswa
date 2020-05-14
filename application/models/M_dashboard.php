@@ -8,14 +8,27 @@
         function actAnnouncement( $data ){
 
             $getData = $this->db->get('pengumuman');
+            
             if ( $getData->num_rows() > 0 ) {
-
-                $this->db->insert('pengumuman', $data);
+                
+                $this->db->where('id_pengumuman', $getData->row()->id_pengumuman);
+                $this->db->update('pengumuman', $data);
+                
             } else {
                 
-                $this->db->where('id_pengumuman', $getData->row()->id_p);
+                $this->db->insert('pengumuman', $data);
             }
+
+            redirect('C_pengumuman');
         }
+
+        function getAnnouncement(){
+
+            return $this->db->get('pengumuman');
+        }
+
+
+        
     
     }
     

@@ -14,7 +14,7 @@
 
         public function index(){
 
-            $data['title'] = "";
+            $data['getPengumuman'] = $this->M_dashboard->getAnnouncement();
 
             $this->load->view('template/header');
             $this->load->view('admin/V_pengumuman', $data);
@@ -23,7 +23,18 @@
 
         function actProcessAnnouncement(){
 
-            // $this->
+            // $this->M_dashboard->actAnnouncement();
+
+            $date = explode('-', $this->input->post('date'));
+            $convert = date('Y-m-d', strtotime( $date[0] ));
+
+            $date = $convert.' '.date('H:i:s', strtotime($date[1]));
+
+            $data = array(
+
+                'date' => $date
+            );
+            $this->M_dashboard->actAnnouncement( $data );
         }
     
     }

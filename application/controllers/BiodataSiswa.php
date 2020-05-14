@@ -44,6 +44,7 @@
             $data['title']='Edit Data';
             $nisn = $this->session->userdata('nisn'); 
             $data['siswa']=$this->BioSiswaModel->getSiswabyId($nisn);
+            $data['getDataSiswa'] = $this->BioSiswaModel->cekBiodata( $nisn );
            
             $this->load->view('template/header2',$data);
             $this->load->view('siswa/siswa_edit',$data);

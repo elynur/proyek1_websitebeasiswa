@@ -3,7 +3,7 @@
         <div class="card mb-3">
           <div class="card-header">
             <i class="fas fa-table"></i>
-            Biodata Siswa</div>
+            Tambah Biodata Siswa</div>
             <div class="card-body">
             <div class="table-responsive">
              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -19,8 +19,6 @@
               </tr>
               <tr>
                   <td>Foto : </td>
-                  <td><input type="text"  class="form-control" id="foto" name="foto"></td>
-              </tr>
               <tr>
                   <td> Alamat : </td>
                   <td><input type="text" class="form-control"  name="alamat_siswa" id="alamat_siswa" ></td>
