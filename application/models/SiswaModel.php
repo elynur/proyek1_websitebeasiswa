@@ -14,7 +14,18 @@
             $query = $this->db->get();
             return $query->result_array();
         }
-    }
+
+        // function getStatusKelolosan(){
+        //     $getStatus = $this->db->get('status_beasiswa');
+
+        //     if($getStatus == 1){
+        //         echo "LOLOS";
+        //     } else {
+        //         echo"GAGAL";
+        //     }
+        //     return $this->db->get('status_beasiswa');
+
+        // }
     
     /* End of file siswa_model.php */
     

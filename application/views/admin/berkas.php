@@ -21,26 +21,26 @@
 							</tr>
 						</thead>
 						<tbody>
-							<?php
-                    $i = 1;
-                    foreach($getDataSiswa->result_array() as $row){
-                      
-                      
-                      // presentase 
-                      $sk_siswa = ($row['sk_siswa']) ? 1 : 0;  
-                      $sk_bermaterai = ($row['sk_bermaterai']) ? 1 : 0;
-                      $sk_pernyataan = ($row['sk_pernyataan_sekolah']) ? 1 : 0;
-                      $sk_gaji = ($row['slip_gaji']) ? 1 : 0;
-                      $sk_listrik = ($row['slip_listrik_rumah']) ? 1 : 0;
-                      $sk_denah = ($row['denah_rumah']) ? 1 : 0;
-                      $sk_foto = ($row['foto_rumah']) ? 1 : 0;
-                      $sk_ijazah = ($row['ijasah']) ? 1 : 0;
-                      $sk_kk = ($row['kartu_keluarga']) ? 1 : 0;
+					<?php
+						$i = 1;
+						foreach($getDataSiswa->result_array() as $row){
+						
+						
+						// presentase 
+						$sk_siswa = ($row['sk_siswa']) ? 1 : 0;  
+						$sk_bermaterai = ($row['sk_bermaterai']) ? 1 : 0;
+						$sk_pernyataan = ($row['sk_pernyataan_sekolah']) ? 1 : 0;
+						$sk_gaji = ($row['slip_gaji']) ? 1 : 0;
+						$sk_listrik = ($row['slip_listrik_rumah']) ? 1 : 0;
+						$sk_denah = ($row['denah_rumah']) ? 1 : 0;
+						$sk_foto = ($row['foto_rumah']) ? 1 : 0;
+						$sk_ijazah = ($row['ijasah']) ? 1 : 0;
+						$sk_kk = ($row['kartu_keluarga']) ? 1 : 0;
 
 
-                      $total = $sk_siswa + $sk_bermaterai + $sk_pernyataan + $sk_gaji + $sk_listrik + $sk_denah + $sk_foto + $sk_ijazah + $sk_kk;
-                      
-                      $percent = ($total * 100) / 9;
+						$total = $sk_siswa + $sk_bermaterai + $sk_pernyataan + $sk_gaji + $sk_listrik + $sk_denah + $sk_foto + $sk_ijazah + $sk_kk;
+						
+						$percent = ($total * 100) / 9;
                       
                     ?>
                     <?php 

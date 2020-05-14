@@ -37,7 +37,7 @@
                         <td><?= $beasiswa['jurusan_sekolah']?></td>
                         <td><?= $beasiswa['nama_politeknik']?></td>
                         <td><?= $beasiswa['nama_prodi']?></td>
-                        <td><?= $beasiswa['status_kelolosan']?></td>
+                        <td><?= $beasiswa['status_beasiswa']?></td>
                       </tr>
                       <?php } ?>
                 </tbody>

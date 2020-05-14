@@ -31,7 +31,7 @@ form_open('login/proses_login');
     <div class="card card-login bg-light mx-auto mt-5">
       <div class="card-header" style="color: #; text-align: center;"><h2>LOGIN</h2></div>
       <div class="card-body">
-      <?php echo form_open('login/proses_login'); ?>
+      <?php echo form_open('Login/proses_login'); ?>
       <form method="post">		
           <div class="form-group">
             <div class="form-label-group">

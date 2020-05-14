@@ -16,7 +16,7 @@
               </tr>
               <tr>
                   <td> Nama : </td>
-                  <td><input type="text" class="form-control" id="nama_siswa" name="nama_siswa" value="<?php echo $this->session->userdata('name') ?>"></td>
+                  <td><input type="text" class="form-control" id="nama_siswa" name="nama_siswa" value="<?= $siswa['nama_siswa']?>"></td>
               </tr>
               <tr>
                   <td> Alamat : </td>
