@@ -33,10 +33,23 @@ form_open('login/proses_login');
       <div class="card-body">
       <?php echo form_open('login/proses_login'); ?>
       <form method="post">		
+        <div class="form-group">
+          <label for="exampleInputUsername1">Username</label>
+          <input type="text" name="username" class="form-control" id="inputUsername" aria-describedby="emailHelp" placeholder="Enter username" required>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Enter password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+        <small class="smallSignUp text-muted" style="margin-top=20px;">Apakah anda punya akun? <a href="<?= base_url('register') ?>">Daftar Disini</a></small>
+        
+      </form>
+      <!-- <form method="post">		
           <div class="form-group">
             <div class="form-label-group">
               <input type="text" name="username" id="inputUsername" class="form-control" placeholder="Username" required="required" autofocus="autofocus">
-              <label for="inputEmail">Username</label>
+              <label for="inputUsername">Username</label>
             </div>
           </div>
           <div class="form-group">
@@ -47,7 +60,7 @@ form_open('login/proses_login');
           </div>
           <button type="submit" class="btn btn-success btn-lg float-right" id="btnlogin" style="padding:3px 8px;">Login</button>
           <small class="smallSignUp text-muted" style="margin-top=20px;">Apakah anda punya akun? <a href="<?= base_url('register') ?>">Daftar Disini</a></small>
-        </form> 
+        </form>  -->
       </div>
     </div>
   </div>

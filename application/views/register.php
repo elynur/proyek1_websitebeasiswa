@@ -64,7 +64,8 @@
                 <input type="password" name="confirmpassword" id="inputconfirmPassword" class="form-control input_user" value="" placeholder="confirmpassword" required="required">
             </div>
           </div>
-          <button type="submit" class="btn btn-success btn-lg float-right" id="btnlogin">DAFTAR</button>
+          
+          <button type="submit" class="btn btn-primary btn-lg float-right">Daftar</button>
         </form>
        
       </div>
