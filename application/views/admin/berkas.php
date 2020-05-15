@@ -151,7 +151,7 @@
                             if ( $row['status_beasiswa'] == 1 ) {
 
                               $styleBtn = "btn btn-warning";
-                              $textBtn  = "Dibatalkan ya cie  kasihan";
+                              $textBtn  = "Konfirmasi Pembatalan";
                             }
                           
                           ?>

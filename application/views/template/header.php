@@ -35,7 +35,7 @@
 
     <!-- Navbar -->
     <ul class="navbar-nav ml-auto ml-md-0">
-      <a class="btn btn-dark" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
+      <a class="btn btn-dark" href="login/proses_logout" data-toggle="modal" data-target="#logoutModal">Logout</a>
     </ul>
 
   </nav>
