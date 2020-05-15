@@ -2,7 +2,7 @@
     
     defined('BASEPATH') OR exit('No direct script access allowed');
     
-    class Upload_berkas extends CI_Model {
+    class Uploadberkas_model extends CI_Model {
     
         public function getSiswabyId($nisn){
             $query=$this->db->get_where('berkas', array('nisn' => $nisn));
@@ -61,7 +61,7 @@
                             <span>Berkas berhasil diunggah pada '.date('d F Y H:i A').'</span>
                         </div>';
                 $this->session->set_flashdata('msg', $style);
-                redirect('Upload_berkas');
+                redirect('upload_berkas');
             } else {
 
                 $style = '<div class="alert alert-danger">
@@ -69,12 +69,12 @@
                             <span>'.$this->upload->display_errors().' pada '.date('d F Y H:i A').'</span>
                         </div>';
                 $this->session->set_flashdata('msg', $style);
-                redirect('Upload_berkas');
+                redirect('upload_berkas');
             }
         }
     
     }
     
-    /* End of file Upload_Berkas.php */
+    /* End of file Upload_berkas.php */
     
 ?>

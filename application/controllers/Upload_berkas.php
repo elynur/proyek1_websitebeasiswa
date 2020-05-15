@@ -8,7 +8,7 @@
             parent::__construct();
             $this->load->helper(array('form', 'url'));
             $this->load->library('upload');
-            $this->load->model('Upload_berkas');
+            $this->load->model('Uploadberkas_model');
             $this->load->library('form_validation');
             $this->load->library('session');
         }
@@ -16,7 +16,7 @@
         public function index(){
             $data['title'] = "Upload Berkas";
             $nisn = $this->session->userdata('nisn'); 
-            $data['berkas']=$this->Upload_berkas->getSiswabyId($nisn);
+            $data['berkas']=$this->Uploadberkas_model->getSiswabyId($nisn);
 
             $this->load->view('template/header2');
             $this->load->view('siswa/upload_berkas', $data);
@@ -26,7 +26,7 @@
 
         function actProcessUpload( $section ) {
 
-            $this->Upload_berkas->actUploadDocument( $section );
+            $this->Uploadberkas_model->actUploadDocument( $section );
         }
     
     }
