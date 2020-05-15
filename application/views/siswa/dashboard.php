@@ -70,7 +70,7 @@
         if (distance < 0) {
             clearInterval(x);
 
-            alert("Wes onok ! jare ely");
+            alert("Batas waktu pengumuman telah habis, lihat hasil");
             $('#load-view-content').load("<?php echo base_url('dashboardSiswa/onLoadHasilSeleksi') ?>");
         }
         }, 1000);

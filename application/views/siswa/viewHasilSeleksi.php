@@ -135,7 +135,7 @@
                     <div class="col-md-12 text-center">
                         <h5 style="color: #f44336">Maaf, anda dinyatakan <strong>TIDAK LULUS SELEKSI</strong> <br> Beasiswa
                             BIDIKSIBA 2020</h5>
-                        <p style="font-size: 12px">Kasih motivasi bila perlu ("koyok semangat, coba lagi tahun depan")</p>
+                        <p style="font-size: 12px">Tetap semangat dan jangan mengeluh, coba lagi di tahun depan</p>
                     </div>
                 </div>
 

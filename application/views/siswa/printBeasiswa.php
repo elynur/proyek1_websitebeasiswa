@@ -16,8 +16,8 @@
                 <img src="<?php echo base_url('assets/img/logo-bukit_asam.png') ?>" alt="Logo" style="width: 100px">
             </div>
             <div class="col-md-10" style="margin-top: 15px">
-                <h4>Hasil Pengumuman Beasiswa <strong style="color: #0d47a1">BIDIKSIBA</strong></h4>
-                <p>Berikut adalah hasil pengumuman atas nama :</p>
+                <h4>Kartu Peserta Penerimaan Beasiswa BIDIKSIBA <strong style="color: #0d47a1">BIDIKSIBA</strong></h4>
+                <p>Berikut adalah biodata peserta atas nama :</p>
             </div>
         </div>
 
@@ -56,7 +56,7 @@
 
         <div class="row">
             <div class="col-md-12 text-center">
-                <h5 style="color: #212121 ; margin-top:20px;">Selamat!! Anda dinyatakan <strong>LOLOS
+                <h5 style="color: #212121 ; margin-top:20px;">Telah dinyatakan <strong>LOLOS
                         SELEKSI</strong> <br> Beasiswa BIDIKSIBA 2020</h5>
                 <p style="font-size: 12px">Dicetak pada <?php echo date('l M d, Y - H:i A') ?>
                 </p>
