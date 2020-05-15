@@ -18,7 +18,7 @@
           <td style="border-right: 1px solid #e0e0e0">
             
             <h5 style="margin: 0px;">Berkas SK Siswa</h5>
-            <p>Lorep isum dolar sit amlet <br> 
+            <p>Masukan berkas dalam bentuk FIle PDF <br> 
               <?php if ( $berkas['sk_siswa'] ) { ?>
               <span class="badge badge-success">Berkas telah di unggah</span> &emsp;
               <a target="_blank" href="<?php echo base_url('assets/berkas/beasiswa/'. $berkas['sk_siswa']) ?>">Lihat berkas siswa</a>

@@ -20,8 +20,15 @@
 
                 'nisn'  => $this->input->post('nisn', true)
             ];
+
+            // data default - biodata
+            $dataBiodata = [
+
+                'nisn'  => $this->input->post('nisn', true)
+            ];
             
             $this->db->insert('berkas', $dataBerkas);
+            $this->db->insert('siswa', $dataBiodata);
             $this->db->insert('user', $data);
 
         }

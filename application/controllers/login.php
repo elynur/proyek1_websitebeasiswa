@@ -33,7 +33,7 @@
                 );
                 $this->session->set_userdata($arr);
                 if ($row['level'] == "admin") {
-                    redirect('Berkas');
+                    redirect('C_pengumuman');
                 } else {
                     redirect('DashboardSiswa');
                 }
