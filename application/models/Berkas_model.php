@@ -2,7 +2,7 @@
     
     defined('BASEPATH') OR exit('No direct script access allowed');
     
-    class BerkasModel extends CI_Model {
+    class Berkas_model extends CI_Model {
 
         
         function getDataSiswa(){

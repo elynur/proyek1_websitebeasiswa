@@ -42,7 +42,7 @@ class Jurusan extends CI_Controller {
                 $this->M_jurusan->editJurusan();
                 $this->session->set_flashdata('flash-data', 'diedit');
 
-                redirect('Jurusan/index','refresh');
+                redirect('jurusan/index','refresh');
             }
         } else {
 
@@ -55,7 +55,7 @@ class Jurusan extends CI_Controller {
             // $data['identitas'] = $this->M_jurusan->getJurusanByID( $param );
             $this->M_jurusan->actDelete( $param );
             
-            redirect('Jurusan/index','refresh');
+            redirect('jurusan/index','refresh');
         }
     }
 
@@ -73,7 +73,7 @@ class Jurusan extends CI_Controller {
             $this->M_jurusan->tambahJurusan();
             $this->session->set_flashdata('flash-data', 'ditambah');
                 
-            redirect('Jurusan/index','refresh');
+            redirect('jurusan/index','refresh');
     
         }
     }

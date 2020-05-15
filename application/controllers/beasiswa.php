@@ -7,7 +7,7 @@
         public function __construct(){
             parent::__construct();
             //Do your magic here
-            $this->load->model('BeasiswaModel');
+            $this->load->model('Beasiswa_model');
             $this->load->library('form_validation');
             $this->load->library('session');
         }
@@ -15,7 +15,7 @@
         public function index()
         {
             $data['title'] = "Admin";
-            $data['beasiswa'] = $this->BeasiswaModel->getAllbeasiswa();
+            $data['beasiswa'] = $this->Beasiswa_model->getAllbeasiswa();
 
             $this->load->view('template/header');
             $this->load->view('admin/beasiswa', $data);

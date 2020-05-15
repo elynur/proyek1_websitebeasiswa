@@ -43,7 +43,7 @@
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-                  <form action="<?php echo base_url('uploadBerkas/actProcessUpload/sk_siswa?format-name=sk-siswa') ?>" method="POST" enctype="multipart/form-data">
+                  <form action="<?php echo base_url('upload_berkas/actProcessUpload/sk_siswa?format-name=sk-siswa') ?>" method="POST" enctype="multipart/form-data">
                   <div class="modal-body text-left">
 
                    <code style="font-weight: bold">Masukan format ekstensi file .pdf | maksimal upload 3 mb</code><hr>
@@ -114,7 +114,7 @@
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-                  <form action="<?php echo base_url('uploadBerkas/actProcessUpload/sk_bermaterai?format-name=sk-bermaterai') ?>" method="POST" enctype="multipart/form-data">
+                  <form action="<?php echo base_url('upload_berkas/actProcessUpload/sk_bermaterai?format-name=sk-bermaterai') ?>" method="POST" enctype="multipart/form-data">
                   <div class="modal-body text-left">
 
                    <code style="font-weight: bold">Masukan format ekstensi file .pdf | maksimal upload 3 mb</code><hr>
@@ -185,7 +185,7 @@
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-                  <form action="<?php echo base_url('uploadBerkas/actProcessUpload/sk_pernyataan_sekolah?format-name=sk-pernyataan-sekolah') ?>" method="POST" enctype="multipart/form-data">
+                  <form action="<?php echo base_url('upload_berkas/actProcessUpload/sk_pernyataan_sekolah?format-name=sk-pernyataan-sekolah') ?>" method="POST" enctype="multipart/form-data">
                   <div class="modal-body text-left">
 
                    <code style="font-weight: bold">Masukan format ekstensi file .pdf | maksimal upload 3 mb</code><hr>
@@ -257,7 +257,7 @@
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-                  <form action="<?php echo base_url('uploadBerkas/actProcessUpload/slip_gaji?format-name=slip-gaji') ?>" method="POST" enctype="multipart/form-data">
+                  <form action="<?php echo base_url('upload_berkas/actProcessUpload/slip_gaji?format-name=slip-gaji') ?>" method="POST" enctype="multipart/form-data">
                   <div class="modal-body text-left">
 
                    <code style="font-weight: bold">Masukan format ekstensi file .pdf | maksimal upload 3 mb</code><hr>
@@ -328,7 +328,7 @@
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-                  <form action="<?php echo base_url('uploadBerkas/actProcessUpload/slip_listrik_rumah?format-name=slip-listrik-rumah') ?>" method="POST" enctype="multipart/form-data">
+                  <form action="<?php echo base_url('upload_berkas/actProcessUpload/slip_listrik_rumah?format-name=slip-listrik-rumah') ?>" method="POST" enctype="multipart/form-data">
                   <div class="modal-body text-left">
 
                    <code style="font-weight: bold">Masukan format ekstensi file .pdf | maksimal upload 3 mb</code><hr>
@@ -400,7 +400,7 @@
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-                  <form action="<?php echo base_url('uploadBerkas/actProcessUpload/denah_rumah?format-name=denah-rumah') ?>" method="POST" enctype="multipart/form-data">
+                  <form action="<?php echo base_url('upload_berkas/actProcessUpload/denah_rumah?format-name=denah-rumah') ?>" method="POST" enctype="multipart/form-data">
                   <div class="modal-body text-left">
 
                    <code style="font-weight: bold">Masukan format ekstensi file .pdf | maksimal upload 3 mb</code><hr>
@@ -471,7 +471,7 @@
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-                  <form action="<?php echo base_url('uploadBerkas/actProcessUpload/foto_rumah?format-name=foto-rumah') ?>" method="POST" enctype="multipart/form-data">
+                  <form action="<?php echo base_url('upload_berkas/actProcessUpload/foto_rumah?format-name=foto-rumah') ?>" method="POST" enctype="multipart/form-data">
                   <div class="modal-body text-left">
 
                    <code style="font-weight: bold">Masukan format ekstensi file .pdf | maksimal upload 3 mb</code><hr>
@@ -542,7 +542,7 @@
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-                  <form action="<?php echo base_url('uploadBerkas/actProcessUpload/ijasah?format-name=ijasah') ?>" method="POST" enctype="multipart/form-data">
+                  <form action="<?php echo base_url('upload_berkas/actProcessUpload/ijasah?format-name=ijasah') ?>" method="POST" enctype="multipart/form-data">
                   <div class="modal-body text-left">
 
                    <code style="font-weight: bold">Masukan format ekstensi file .pdf | maksimal upload 3 mb</code><hr>
@@ -614,7 +614,7 @@
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-                  <form action="<?php echo base_url('uploadBerkas/actProcessUpload/kartu_keluarga?format-name=KK') ?>" method="POST" enctype="multipart/form-data">
+                  <form action="<?php echo base_url('upload_berkas/actProcessUpload/kartu_keluarga?format-name=KK') ?>" method="POST" enctype="multipart/form-data">
                   <div class="modal-body text-left">
 
                    <code style="font-weight: bold">Masukan format ekstensi file .pdf | maksimal upload 3 mb</code><hr>

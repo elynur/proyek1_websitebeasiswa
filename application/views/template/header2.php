@@ -44,22 +44,22 @@
     <ul class="sidebar navbar-nav">
 
     	<li class="nav-item">
-    		<a class="nav-link" href="<?php echo base_url('DashboardSiswa') ?>">
+    		<a class="nav-link" href="<?php echo base_url('dashboard_siswa') ?>">
     			<i class="fas fa-users"></i>
     			<span>Home</span></a>
     	</li>
     	<li class="nav-item">
-    		<a class="nav-link" href="<?php echo base_url('BiodataSiswa') ?>">
+    		<a class="nav-link" href="<?php echo base_url('biodata_siswa') ?>">
     			<i class="fas fa-users"></i>
     			<span>Data Diri</span></a>
     	</li>
     	<li class="nav-item">
-    		<a class="nav-link" href="<?php echo base_url('IsiBeasiswa') ?>">
+    		<a class="nav-link" href="<?php echo base_url('isi_beasiswa') ?>">
     			<i class="fas fa-book-open"></i>
     			<span>Data Beasiswa</span></a>
     	</li>
     	<li class="nav-item">
-    		<a class="nav-link" href="<?php echo base_url('UploadBerkas') ?>">
+    		<a class="nav-link" href="<?php echo base_url('upload_berkas') ?>">
     			<i class="fas fa-users"></i>
     			<span>Upload Berkas</span></a>
     	</li>

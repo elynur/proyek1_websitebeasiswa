@@ -3,7 +3,7 @@
     
     defined('BASEPATH') OR exit('No direct script access allowed');
     
-    class BioSiswaModel extends CI_Model {
+    class Biosiswa_model extends CI_Model {
         
         public function __construct()
         {
@@ -34,7 +34,7 @@
                 "jurusan_sekolah" => $this->input->post('jurusan_sekolah', true)
             ];
             $this->db->insert('siswa', $data);
-            redirect('BiodataSiswa','refresh');
+            redirect('biodata_siswa','refresh');
         }
         public function edit(){
 
@@ -125,7 +125,7 @@
                                 <span>Berkas berhasil diunggah pada '.date('d F Y H:i A').'</span>
                             </div>';
                     $this->session->set_flashdata('msg', $style);
-                    redirect('BiodataSiswa');
+                    redirect('biodata_siswa');
                 } else {
     
                     $style = '<div class="alert alert-danger">
@@ -133,7 +133,7 @@
                                 <span>'.$this->upload->display_errors().' pada '.date('d F Y H:i A').'</span>
                             </div>';
                     $this->session->set_flashdata('msg', $style);
-                    redirect('BiodataSiswa');
+                    redirect('biodata_siswa');
                 }
             }
     }

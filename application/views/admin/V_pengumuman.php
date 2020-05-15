@@ -22,7 +22,7 @@
 
                     <hr>
 
-                    <form action="<?php echo base_url() ?>C_pengumuman/actProcessAnnouncement" method="POST">
+                    <form action="<?php echo base_url() ?>c_pengumuman/actProcessAnnouncement" method="POST">
 
 
 

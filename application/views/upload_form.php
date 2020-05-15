@@ -6,7 +6,7 @@
 
 <?php echo $error;?>
 
-<?php echo form_open_multipart('UploadBerkas/upload');?>
+<?php echo form_open_multipart('upload_berkas/upload');?>
 
 <input type="file" name="userfile" size="20" />
 

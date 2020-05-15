@@ -2,7 +2,7 @@
     
     defined('BASEPATH') OR exit('No direct script access allowed');
     
-    class IsiBeasiswa extends CI_Controller {
+    class Isi_beasiswa extends CI_Controller {
         
         function __construct(){
 
@@ -10,7 +10,7 @@
             $this->load->model('M_politeknik');
             $this->load->model('M_prodi');
             $this->load->model('M_jurusan');
-            $this->load->model('IsiBeasiswaModel');
+            $this->load->model('Isibeasiswa_model');
             $this->load->library('form_validation');
             $this->load->library('session');
         }
@@ -22,9 +22,9 @@
             $data['getDataJurusan'] = $this->M_jurusan->getDataJurusan();
             $data['getDataProdi'] = $this->M_prodi->getDataProdi();
             $nisn = $this->session->userdata('nisn'); 
-            $data['siswa']=$this->IsiBeasiswaModel->getSiswabyId($nisn);
+            $data['siswa']=$this->Isibeasiswa_model->getSiswabyId($nisn);
 
-            $data['cekBeasiswa'] = $this->IsiBeasiswaModel->cekBeasiswa( $nisn ); 
+            $data['cekBeasiswa'] = $this->Isibeasiswa_model->cekBeasiswa( $nisn ); 
             
            
             $this->load->view('template/header2');
@@ -42,7 +42,7 @@
             $data['getDataProdi'] = $this->M_prodi->getDataProdi();
             $data['getDataJurusan'] = $this->M_jurusan->getDataJurusan();
             $nisn = $this->session->userdata('nisn'); 
-            $data['siswa']=$this->IsiBeasiswaModel->getSiswabyId($nisn);
+            $data['siswa']=$this->Isibeasiswa_model->getSiswabyId($nisn);
             
             $this->load->view('template/header2',$data);
             $this->load->view('siswa/tambah_beasiswa',$data);
@@ -50,9 +50,9 @@
         }
 
          public function tambahBaru(){
-            $this->IsiBeasiswaModel->tambahData();
+            $this->Isibeasiswa_model->tambahData();
             $this->session->set_flashdata('flash-data','ditambahkan');
-            redirect('IsiBeasiswa','refresh');  
+            redirect('isi_beasiswa','refresh');  
          }
 
 
@@ -61,7 +61,7 @@
             $getPoliteknik = $this->input->get('id_politeknik');
 
             $kondisi = array('id_politeknik' => $getPoliteknik);
-            $getDataJurusan = $this->IsiBeasiswaModel->getDataInstitusi('jurusan', $kondisi);
+            $getDataJurusan = $this->Isibeasiswa_model->getDataInstitusi('jurusan', $kondisi);
             // select * from jurusan where id_politeknik = $getPoliteknik
 
             $data = "";
@@ -95,7 +95,7 @@
             $getJurusan = $this->input->get('id_jurusan');
 
             $kondisi = array('id_jurusan' => $getJurusan);
-            $getDataProdi = $this->IsiBeasiswaModel->getDataInstitusi('prodi', $kondisi);
+            $getDataProdi = $this->Isibeasiswa_model->getDataInstitusi('prodi', $kondisi);
             // select * from jurusan where id_politeknik = $getPoliteknik
 
             $data = "";
@@ -131,7 +131,7 @@
             $data['title']='Edit Data';
             
             $nisn = $this->session->userdata('nisn'); 
-            $data['siswa']=$this->IsiBeasiswaModel->getSiswabyId($nisn);
+            $data['siswa']=$this->Isibeasiswa_model->getSiswabyId($nisn);
             $data['getDataPoliteknik'] = $this->M_politeknik->getDataPoliteknik();
             
             $this->load->view('template/header2',$data);
@@ -142,9 +142,9 @@
 
         // action - update
         public function editBeasiswa(){
-            $this->IsiBeasiswaModel->edit();
+            $this->Isibeasiswa_model->edit();
             $this->session->set_flashdata('flash-data','diedit');
-            redirect('IsiBeasiswa','refresh');  
+            redirect('isi_beasiswa','refresh');  
         }
     
     }

@@ -8,7 +8,7 @@
             <div class="table-responsive">
              <table class="table table-bordered" width="100%" cellspacing="0">
              
-             <form method="POST" action="<?php echo base_url('BiodataSiswa/editBio?format-name='.(($getDataSiswa->row()->nama_siswa)? $getDataSiswa->row()->nama_siswa : 'SISWA').'') ?>') ?>" enctype="multipart/form-data">
+             <form method="POST" action="<?php echo base_url('biodata_siswa/editBio?format-name='.(($getDataSiswa->row()->nama_siswa)? $getDataSiswa->row()->nama_siswa : 'SISWA').'') ?>') ?>" enctype="multipart/form-data">
              <?php foreach($siswa as $siswa){ ?>
                 <tr>
                   <td> NISN : </td>

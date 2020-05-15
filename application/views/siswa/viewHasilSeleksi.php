@@ -66,7 +66,7 @@
                         <h5 style="color: #212121 ; margin-top:20px;">Selamat!! Anda dinyatakan <strong>LOLOS
                                 SELEKSI</strong> <br> Beasiswa BIDIKSIBA 2020</h5>
                         <p style="font-size: 12px">Silahkan cetak kartu peserta sebagai bukti penerimaan beasiswa.
-                            <a target="_blank" href="<?php echo base_url('dashboardSiswa/cetakkartu') ?>">cetak kartu disini</a>
+                            <a target="_blank" href="<?php echo base_url('dashboard_siswa/cetakkartu') ?>">cetak kartu disini</a>
                         </p>
                     </div>
                 </div>

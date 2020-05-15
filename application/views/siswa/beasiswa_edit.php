@@ -7,7 +7,7 @@
             <div class="card-body">
             <div class="table-responsive">
              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-             <?php echo form_open('IsiBeasiswa/editBeasiswa'); ?>
+             <?php echo form_open('isi_beasiswa/editBeasiswa'); ?>
                 <form method="POST">
                 <tr>
                   <td> NISN : </td>
@@ -81,7 +81,7 @@
       // set value jurusan
       $.ajax({
         type : "GET", 
-        url  : "<?php echo base_url('isiBeasiswa/getJurusan') ?>?id_politeknik=<?php echo $siswa[0]['politeknik_id'] ?>&selectjurusan=<?php echo $siswa[0]['jurusan_id'] ?>",
+        url  : "<?php echo base_url('isi_beasiswa/getJurusan') ?>?id_politeknik=<?php echo $siswa[0]['politeknik_id'] ?>&selectjurusan=<?php echo $siswa[0]['jurusan_id'] ?>",
         dataType: "json",
         success: function( data ) {
 
@@ -92,7 +92,7 @@
       // set value prodi
       $.ajax({
         type : "GET", 
-        url  : "<?php echo base_url('isiBeasiswa/getProdi') ?>?id_jurusan=<?php echo $siswa[0]['jurusan_id'] ?>&selectProdi=<?php echo $siswa[0]['prodi_id'] ?>",
+        url  : "<?php echo base_url('isi_beasiswa/getProdi') ?>?id_jurusan=<?php echo $siswa[0]['jurusan_id'] ?>&selectProdi=<?php echo $siswa[0]['prodi_id'] ?>",
         dataType: "json",
         success: function( data ) {
 
@@ -108,7 +108,7 @@
         
         $.ajax({
             type : "GET",
-            url  : "<?php echo base_url() ?>isiBeasiswa/getJurusan?id_politeknik=" + this.value,
+            url  : "<?php echo base_url() ?>isi_beasiswa/getJurusan?id_politeknik=" + this.value,
             dataType : "json",
             success: function( data ){
 
@@ -125,7 +125,7 @@
   
         $.ajax({
             type : "GET",
-            url  : "<?php echo base_url() ?>isiBeasiswa/getProdi?id_jurusan=" + this.value,
+            url  : "<?php echo base_url() ?>isi_beasiswa/getProdi?id_jurusan=" + this.value,
             dataType : "json",
             success: function( data ){
 

@@ -19,7 +19,7 @@
                 $this->db->insert('pengumuman', $data);
             }
 
-            redirect('C_pengumuman');
+            redirect('c_pengumuman');
         }
 
         function getAnnouncement(){

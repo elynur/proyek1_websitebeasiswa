@@ -7,7 +7,7 @@
         public function __construct(){
             parent::__construct();
             //Do your magic here
-            $this->load->model('BerkasModel');
+            $this->load->model('Berkas_model');
             $this->load->library('form_validation');
             $this->load->library('session');
         }
@@ -15,7 +15,7 @@
         public function index()
         {
             $data['title'] = "Admin";
-            $data['getDataSiswa'] = $this->BerkasModel->getDataSiswa();
+            $data['getDataSiswa'] = $this->Berkas_model->getDataSiswa();
 
             $this->load->view('template/header');
             $this->load->view('admin/berkas', $data);
@@ -27,7 +27,7 @@
 
             if ( $nisn ) {
 
-                $this->BerkasModel->actConfirmBeasiswa( $nisn, $code );
+                $this->Berkas_model->actConfirmBeasiswa( $nisn, $code );
                 redirect('berkas');
             } else {
 

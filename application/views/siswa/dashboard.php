@@ -32,11 +32,11 @@
 
     <?php if ( $status_pengumuman ) {  // true : pengumuman dibuka ?>
       
-      $('#load-view-content').load("<?php echo base_url('dashboardSiswa/onLoadHasilSeleksi') ?>");
+      $('#load-view-content').load("<?php echo base_url('dashboard_siswa/onLoadHasilSeleksi') ?>");
 
     <?php } else { ?>
 
-      $('#load-view-content').load("<?php echo base_url('dashboardSiswa/onLoadCountDown') ?>");
+      $('#load-view-content').load("<?php echo base_url('dashboard_siswa/onLoadCountDown') ?>");
 
       // Set the date we're counting down to
       <?php
@@ -71,7 +71,7 @@
             clearInterval(x);
 
             alert("Batas waktu pengumuman telah habis, lihat hasil");
-            $('#load-view-content').load("<?php echo base_url('dashboardSiswa/onLoadHasilSeleksi') ?>");
+            $('#load-view-content').load("<?php echo base_url('dashboard_siswa/onLoadHasilSeleksi') ?>");
         }
         }, 1000);
 

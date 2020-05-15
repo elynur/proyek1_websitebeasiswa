@@ -8,7 +8,7 @@
                     <div class="card-body">
                         <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <form action="<?php echo base_url('Akun/tambah')?>" method="POST">
+                                    <form action="<?php echo base_url('akun/tambah')?>" method="POST">
                                     <tr>
                                             <td>Nama</td>
                                             <td><input type="text" class="form-control" name="nama" required></td>

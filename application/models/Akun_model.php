@@ -2,7 +2,7 @@
     
     defined('BASEPATH') OR exit('No direct script access allowed');
     
-    class AkunModel extends CI_Model {
+    class Akun_model extends CI_Model {
         /**
          * 
          *  Penjelasan mengenai return query | getAllAkun dan getAkunById

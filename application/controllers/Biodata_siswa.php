@@ -2,21 +2,21 @@
     
     defined('BASEPATH') OR exit('No direct script access allowed');
     
-    class BiodataSiswa extends CI_Controller {
+    class Biodata_siswa extends CI_Controller {
         
         public function __construct()
         {
             parent::__construct();
-            $this->load->model('BioSiswaModel');
+            $this->load->model('Biosiswa_model');
             $this->load->library('form_validation');
             $this->load->library('session');
         }
         public function index(){
             $data['title'] = "Biodata Siswa";
             $nisn = $this->session->userdata('nisn'); 
-            $data['siswa']=$this->BioSiswaModel->getSiswabyId($nisn);
+            $data['siswa']=$this->Biosiswa_model->getSiswabyId($nisn);
 
-            $data['cekBiodata'] = $this->BioSiswaModel->cekBiodata( $nisn ); 
+            $data['cekBiodata'] = $this->Biosiswa_model->cekBiodata( $nisn ); 
             
             $this->load->view('template/header2');
             $this->load->view('siswa/biodata_siswa', $data);
@@ -26,7 +26,7 @@
         public function tambah(){
             $data['title']='Tambah Data';
             $nisn = $this->session->userdata('nisn'); 
-            $data['siswa']=$this->BioSiswaModel->getSiswabyId($nisn);
+            $data['siswa']=$this->Biosiswa_model->getSiswabyId($nisn);
 
             $this->load->view('template/header2',$data);
             $this->load->view('siswa/tambah_biodata',$data);
@@ -34,17 +34,17 @@
         }
 
         public function tambahBaru(){
-            $this->BioSiswaModel->tambahBio();
+            $this->Biosiswa_model->tambahBio();
             $this->session->set_flashdata('flash-data','ditambahkan');
-            redirect('BiodataSiswa','refresh');  
+            redirect('biodata_siswa','refresh');  
         }
 
         // view
         public function edit(){
             $data['title']='Edit Data';
             $nisn = $this->session->userdata('nisn'); 
-            $data['siswa']=$this->BioSiswaModel->getSiswabyId($nisn);
-            $data['getDataSiswa'] = $this->BioSiswaModel->cekBiodata( $nisn );
+            $data['siswa']=$this->Biosiswa_model->getSiswabyId($nisn);
+            $data['getDataSiswa'] = $this->Biosiswa_model->cekBiodata( $nisn );
            
             $this->load->view('template/header2',$data);
             $this->load->view('siswa/siswa_edit',$data);
@@ -54,9 +54,9 @@
 
         // action - update
         public function editBio(){
-            $this->BioSiswaModel->edit();
+            $this->Biosiswa_model->edit();
             $this->session->set_flashdata('flash-data','diedit');
-            redirect('BiodataSiswa','refresh');  
+            redirect('biodata_siswa','refresh');  
         }
 
         function actProcessUpload($section){

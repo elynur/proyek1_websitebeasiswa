@@ -8,7 +8,7 @@
             parent::__construct();
             $this->load->helper('url');
             $this->load->helper('form');
-            $this->load->model('LoginModel');
+            $this->load->model('Login_model');
         }
         
         public function index(){
@@ -19,7 +19,7 @@
             $username = htmlspecialchars($this->input->post('username'));
             $password = htmlspecialchars($this->input->post('password'));
     
-            $ceklogin = $this->LoginModel->processLogin($username, $password);
+            $ceklogin = $this->Login_model->processLogin($username, $password);
     
             if ($ceklogin) {
                 foreach ($ceklogin as $row);
@@ -33,9 +33,9 @@
                 );
                 $this->session->set_userdata($arr);
                 if ($row['level'] == "admin") {
-                    redirect('C_pengumuman');
+                    redirect('c_pengumuman');
                 } else {
-                    redirect('DashboardSiswa');
+                    redirect('dashboard_siswa');
                 }
             } else {
                 $this->session->set_flashdata('message', 'Password salah');

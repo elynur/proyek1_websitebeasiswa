@@ -2,13 +2,13 @@
     
     defined('BASEPATH') OR exit('No direct script access allowed');
     
-    class DashboardSiswa extends CI_Controller {
+    class Dashboard_siswa extends CI_Controller {
 
         public function __construct()
         {
             parent::__construct();
             $this->load->model('M_dashboard');
-            $this->load->model('BeasiswaModel');
+            $this->load->model('Beasiswa_model');
         }
     
         public function index()
@@ -61,7 +61,7 @@
 
         function onLoadHasilSeleksi(){
 
-            $data['getSiswa'] = $this->BeasiswaModel->getAllbeasiswa( array( 'siswa.nisn' => $this->session->userdata('nisn') ) );
+            $data['getSiswa'] = $this->Beasiswa_model->getAllbeasiswa( array( 'siswa.nisn' => $this->session->userdata('nisn') ) );
             
             $data['Announcement'] = $this->M_dashboard->getAnnouncement();
             
@@ -81,7 +81,7 @@
 
         function cetakkartu() {
 
-            $data['getSiswa'] = $this->BeasiswaModel->getAllbeasiswa( array( 'siswa.nisn' => $this->session->userdata('nisn') ) );
+            $data['getSiswa'] = $this->Beasiswa_model->getAllbeasiswa( array( 'siswa.nisn' => $this->session->userdata('nisn') ) );
             
             $data['Announcement'] = $this->M_dashboard->getAnnouncement();
             

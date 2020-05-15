@@ -58,7 +58,7 @@
                 <?php } ?>
               </table>
             </div>
-            <a href="<?php echo base_url('BiodataSiswa/edit') ?>" class="btn btn-warning"><i class="fa fa-edit"></i> Sunting data siswa</a>
+            <a href="<?php echo base_url('biodata_siswa/edit') ?>" class="btn btn-warning"><i class="fa fa-edit"></i> Sunting data siswa</a>
           </div>
         </div>
 
